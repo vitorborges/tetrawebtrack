@@ -1,4 +1,4 @@
-package br.com.tetra.webtrack.controler;
+package br.com.tetra.webtrack.controller;
 
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
