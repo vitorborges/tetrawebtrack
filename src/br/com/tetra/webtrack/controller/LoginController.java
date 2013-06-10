@@ -6,9 +6,8 @@ import br.com.caelum.vraptor.Resource;
 @Resource
 public class LoginController {
 
-
-	public String login(){
+	@Path("/")
+	public void login(){
 		
-		return "login";
 	}
 }
