@@ -28,7 +28,13 @@
           <!--   <a class="brand" href="http://twitter.github.io/bootstrap/examples/starter-template.html#">Project name</a> -->
           <div class="nav-collapse collapse">
               <ul class="nav">
-              
+              <li><a href="#">HelpDesk</a></li>
+              <li><a href="#">KB</a></li>
+              <li><a href="#">Projetos</a></li>
+            <a>img src="imagens/glyphicons_003_user.png" >
+             
+              Logado como <a href="#" class="navbar-link">Jocinardo</a>
+       
             </ul>
           </div>
         </div>
