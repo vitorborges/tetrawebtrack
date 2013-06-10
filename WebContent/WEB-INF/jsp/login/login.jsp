@@ -54,15 +54,7 @@
     <div class="container">
 
       <form class="form-signin">
-        <input type="text" class="input-block-level" placeholder="Usuário" style="width: 346px;">
-        <input type="password" class="input-block-level" placeholder="Senha" style="width: 346px; ">
-        
-         <a href="#">Esqueceu a Senha?  |</a>
-         <a href="#">Solicite login</a>
-         <br>
-         
-        <button class="btn btn-info" type="submit">Acessar Sistema</button>
-      </form>
+        <h1>Codigo HTML Login</h1>
     </div>
  
   </body>
