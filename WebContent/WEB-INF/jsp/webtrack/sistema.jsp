@@ -69,8 +69,6 @@
        <span class="icon-bar"></span>
        </button>
           <a class="brand" href="#">Tetra WebTrack</a>
-          
-          
           	<!-- Direito -->
           	<div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
@@ -82,22 +80,20 @@
 		   
            <img src="<c:url value='/img/usuario.png' />" alt="" /> 
              
-            <a href="#" class="navbar-link">Analista de Sistemas
-            
-              </a>
-            </p>
-            <ul class="nav">
+            <a href="#" class="navbar-link">Analista de Sistemas</a>
+            	</p>
+            		<ul class="nav">
                          <li><a href="#">HekpDesk</a></li>
                          <li><a href="#">KB</a></li>
                          <li><a  href="#">Projetos</a></li>
+     
                          
-                         
-           			<img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
+           			<img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
            			<img src="<c:url value='/img/kb.png' />" alt="" />              
            			<img src="<c:url value='/img/projetos.png' />" alt="" /> 
 
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
