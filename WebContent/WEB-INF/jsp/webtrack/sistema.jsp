@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -68,9 +67,10 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
-       
        </button>
-          	
+          <a class="brand" href="#">Tetra WebTrack</a>
+          
+          
           	<!-- Direito -->
           	<div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
@@ -78,16 +78,23 @@
            <img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
            <img src="<c:url value='/img/notificacao.png' />" alt="" /> 
            
-  				<input type="text" class="input-medium search-query" value="testes">
+  		  <input type="text" class="input-medium search-query" value="">
 		   
-            <img src="/img/usuario.png" />
+           <img src="<c:url value='/img/usuario.png' />" alt="" /> 
              
-            <a href="#" class="navbar-link">Analista
+            <a href="#" class="navbar-link">Analista de Sistemas
             
               </a>
             </p>
             <ul class="nav">
-             
+                         <li><a href="#">HekpDesk</a></li>
+                         <li><a href="#">KB</a></li>
+                         <li><a  href="#">Projetos</a></li>
+                         
+                         
+           			<img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
+           			<img src="<c:url value='/img/kb.png' />" alt="" />              
+           			<img src="<c:url value='/img/projetos.png' />" alt="" /> 
 
             </ul>
           </div><!--/.nav-collapse -->
