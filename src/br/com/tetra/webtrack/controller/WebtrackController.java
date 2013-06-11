@@ -10,4 +10,9 @@ public class WebtrackController {
 	public void sistema(){
 		
 	}
+	
+	@Path("/webtrack/tickets")
+	public void tickets(){
+		
+	}
 }
