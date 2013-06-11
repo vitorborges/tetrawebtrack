@@ -4,7 +4,7 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 
 @Resource
-public class HelpDeskController {
+public class HelpdeskController {
 
 	@Path("/helpdesk/tickets")
 	public void tickets(){
