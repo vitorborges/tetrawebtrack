@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <!-- css -->
+    <link href="<c:url value="/css/style_body.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     
 <title>Tetra WebTrack</title>
@@ -97,8 +98,29 @@
         </div>
       </div>
     </div>
-
- 
+    <br>
+    <br>
+    <br>
+    <br>
+     <div class="container-fluid">
+    <!-- chamados -->
+	<div class="body-sistema">
+	<legend>Chamados</legend>
+       <img src="<c:url value='/img/base_body.png' />" alt="" /> 
+	</div>
+	
+	<!-- base de conhecimento -->
+	<div class="body-sistema">
+	<legend>Base de Conhecimento</legend>
+       <img src="<c:url value='/img/base_body.png' />" alt="" /> 
+	</div>
+	
+	<!-- implantações -->
+	<div class="body-sistema">
+	<legend>Implantações</legend>
+       <img src="<c:url value='/img/base_body.png' />" alt="" /> 
+	</div>
+ 	</div>
 
 </f:view>
  <script src="javascript/jquery.js"></script>
