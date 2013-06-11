@@ -84,16 +84,11 @@
             <a href="#" class="navbar-link">Analista de Sistemas</a>
             	</p>
             		<ul class="nav">
-                         <li><a href="#">HekpDesk</a></li>
-                         <li><a href="#">KB</a></li>
-                         <li><a  href="#">Projetos</a></li>
-     
-                         
-           			<img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
-           			<img src="<c:url value='/img/kb.png' />" alt="" />              
-           			<img src="<c:url value='/img/projetos.png' />" alt="" /> 
+                         <li><a href="#"><img src="<c:url value='/img/helpdesk.png' />" alt="" /> </a></li>
+                         <li><a href="#"><img src="<c:url value='/img/kb.png' />" alt="" /></a></li>
+                         <li><a  href="#"><img src="<c:url value='/img/projetos.png' />" alt="" /></a></li> 			 
 
-            </ul>
+            		</ul>
           </div>
         </div>
       </div>
