@@ -103,22 +103,51 @@
     <br>
     <br>
      <div class="container-fluid">
+     
     <!-- chamados -->
 	<div class="body-sistema">
 	<legend>Chamados</legend>
-       <img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
+       <img src="<c:url value='/img/helpdesk.png' />" alt="" />
+       <br>
+       <br> 
+       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+       
+       <br>
+       <br>
+       <button class="btn btn-inverse" type="button">Novo</button>
+       
 	</div>
 	
 	<!-- base de conhecimento -->
 	<div class="body-sistema">
 	<legend>Base de Conhecimento</legend>
-       <img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
+       <img src="<c:url value='/img/helpdesk.png' />" alt="" />
+       <br>
+       <br> 
+       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+       
+       <br>
+       <br>
+       <button class="btn btn-inverse" type="button">Novo</button>
 	</div>
 	
 	<!-- implantações -->
 	<div class="body-sistema">
 	<legend>Implantações</legend>
-       <img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
+       <img src="<c:url value='/img/helpdesk.png' />" alt="" />
+       <br>
+       <br> 
+       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+       
+       <br>
+       <br>
+       <button class="btn btn-inverse" type="button">Novo</button>
 	</div>
  	</div>
 
