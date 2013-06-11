@@ -10,24 +10,20 @@
 <!-- css -->
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     
-<title>Sistema de Gestão</title>
+<title>Tetra WebTrack</title>
  <style type="text/css">
  html,
       body {
         height: 100%;
-        /* The html and body elements cannot have any padding or margin. */
       }
 
-      /* Wrapper for page content to push down footer */
       #wrap {
         min-height: 100%;
         height: auto !important;
         height: 100%;
-        /* Negative indent footer by it's height */
         margin: 0 auto -60px;
       }
 
-      /* Set the fixed height of the footer here */
       #push,
       #footer {
         height: 60px;
@@ -36,7 +32,6 @@
         background-color: #f5f5f5;
       }
 
-      /* Lastly, apply responsive CSS fixes as necessary */
       @media (max-width: 767px) {
         #footer {
           margin-left: -20px;
@@ -45,12 +40,6 @@
           padding-right: 20px;
         }
       }
-
-
-
-      /* Custom page CSS
-      -------------------------------------------------- */
-      /* Not required for template or sticky footer method. */
 
       #wrap > .container {
         padding-top: 60px;
@@ -72,47 +61,76 @@
 <f:view>
 
 
-    <!-- Part 1: Wrap all page content here -->
-    <div id="wrap">
-
-      <!-- Fixed navbar -->
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+<div class="navbar navbar-inverse navbar-fixed-top">
+     <div class="navbar-inner">
+     <div class="container-fluid">
+       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       </button>
+          	<a class="brand" href="#"> Gestão de Pos-Vendas <span class="label label-important">Beta</span></a>
+          	<div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+            <i class="icon-search icon-white"></i>
+            <img src="imagens/glyphicons_003_user.png" >
+             
+              Logado como <a href="#" class="navbar-link">Jocinardo
+              </a>
+            </p>
+            <ul class="nav">
+            <li class="active"><a href="#">Inicio</a></li>
+             
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRM <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Novo Ticket</a></li>
+                  <li><a href="#">Consular Ticket</a></li>
+                  <li><a href="#">Fechamento de Ticket</a></li>
+                  <li><a href="#">Visualizar Intervenções</a></li>
+                  <li><a href="#">Historico do Ticket </a></li>
+                  <li><a href="#">Intervenção </a></li>
+                </ul>
+                 
+         
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pedidos <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Contratos</a></li>
+                  <li><a href="#">Tickets por Operador</a></li>
+                  <li><a href="#">Tickets por Cliente</a></li>
+                  <li><a href="#">Detalhamento de SLA</a></li>
+                </ul>
+       
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">Novo Projeto</a></li>
+                  <li><a href="../Departamentos/index.php">Departamentos</a></li>
+                  <li><a href="#">Usuarios</a></li>
+                  <li><a href="#">Equipamentos</a></li>
+                  <li><a href="#">Serviços</a></li>
+                  <li><a href="#">Analistas</a></li>
+                 
+                </ul>
             
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rastreamento de Pacotes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">Clientes</a></li>
+                  <li><a href="../Departamentos/index.php">Departamentos</a></li>
+                  <li><a href="#">Usuarios</a></li>
+                  <li><a href="#">Equipamentos</a></li>
+                  <li><a href="#">Serviços</a></li>
+                  <li><a href="#">Analistas</a></li>
+                 
+                </ul>   
                 
-                
-                
-                
-              
-                <li><a href="login"> <i class="icon-large icon-user"></i> Bem vindo: Jocinardo</a></li>
-               
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </div>
-      </div>
+                <li><a href="#"><span class="badge badge-important">6</span> Mensagens</a></li>
 
-      <!-- Begin page content -->
-      <div class="container">
-      
-<ul class="breadcrumb">
-  <li><a href="#">Sistema</a> <span class="divider">/</span></li>
-  <li class="active">Tela Inicial</li>
-</ul>
-      
-      </div>
+            </ul>
+          </div><!--/.nav-collapse -->
 
-      <div id="push"></div>
-    </div>
 
     <div id="footer">
       <div class="container">
