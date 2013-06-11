@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -59,8 +60,7 @@
 </head>
 <body>
 <f:view>
-
-
+ 
 <div class="navbar navbar-inverse navbar-fixed-top">
      <div class="navbar-inner">
      <div class="container-fluid">
@@ -68,75 +68,34 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
+       
        </button>
-          	<a class="brand" href="#"> Gestão de Pos-Vendas <span class="label label-important">Beta</span></a>
+          	
+          	<!-- Direito -->
           	<div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-            <i class="icon-search icon-white"></i>
-            <img src="imagens/glyphicons_003_user.png" >
+           
+           <img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
+           <img src="<c:url value='/img/notificacao.png' />" alt="" /> 
+           
+  				<input type="text" class="input-medium search-query" value="testes">
+		   
+            <img src="/img/usuario.png" />
              
-              Logado como <a href="#" class="navbar-link">Jocinardo
+            <a href="#" class="navbar-link">Analista
+            
               </a>
             </p>
             <ul class="nav">
-            <li class="active"><a href="#">Inicio</a></li>
              
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRM <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Novo Ticket</a></li>
-                  <li><a href="#">Consular Ticket</a></li>
-                  <li><a href="#">Fechamento de Ticket</a></li>
-                  <li><a href="#">Visualizar Intervenções</a></li>
-                  <li><a href="#">Historico do Ticket </a></li>
-                  <li><a href="#">Intervenção </a></li>
-                </ul>
-                 
-         
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pedidos <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Contratos</a></li>
-                  <li><a href="#">Tickets por Operador</a></li>
-                  <li><a href="#">Tickets por Cliente</a></li>
-                  <li><a href="#">Detalhamento de SLA</a></li>
-                </ul>
-       
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="">Novo Projeto</a></li>
-                  <li><a href="../Departamentos/index.php">Departamentos</a></li>
-                  <li><a href="#">Usuarios</a></li>
-                  <li><a href="#">Equipamentos</a></li>
-                  <li><a href="#">Serviços</a></li>
-                  <li><a href="#">Analistas</a></li>
-                 
-                </ul>
-            
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rastreamento de Pacotes <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="">Clientes</a></li>
-                  <li><a href="../Departamentos/index.php">Departamentos</a></li>
-                  <li><a href="#">Usuarios</a></li>
-                  <li><a href="#">Equipamentos</a></li>
-                  <li><a href="#">Serviços</a></li>
-                  <li><a href="#">Analistas</a></li>
-                 
-                </ul>   
-                
-                <li><a href="#"><span class="badge badge-important">6</span> Mensagens</a></li>
 
             </ul>
           </div><!--/.nav-collapse -->
-
-
-    <div id="footer">
-      <div class="container">
-        <p class="muted credit">Wise Solutionss <a href="http://martinbean.co.uk">wisesolutionss.com.br</a></p>
+        </div>
       </div>
     </div>
+
+ 
 
 </f:view>
  <script src="javascript/jquery.js"></script>
