@@ -106,19 +106,19 @@
     <!-- chamados -->
 	<div class="body-sistema">
 	<legend>Chamados</legend>
-       <img src="<c:url value='/img/base_body.png' />" alt="" /> 
+       <img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
 	</div>
 	
 	<!-- base de conhecimento -->
 	<div class="body-sistema">
 	<legend>Base de Conhecimento</legend>
-       <img src="<c:url value='/img/base_body.png' />" alt="" /> 
+       <img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
 	</div>
 	
 	<!-- implantações -->
 	<div class="body-sistema">
 	<legend>Implantações</legend>
-       <img src="<c:url value='/img/base_body.png' />" alt="" /> 
+       <img src="<c:url value='/img/helpdesk.png' />" alt="" /> 
 	</div>
  	</div>
 
