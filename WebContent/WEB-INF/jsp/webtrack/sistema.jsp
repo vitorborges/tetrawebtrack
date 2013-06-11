@@ -13,46 +13,7 @@
     
 <title>Tetra WebTrack</title>
  <style type="text/css">
- html,
-      body {
-        height: 100%;
-      }
-
-      #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        margin: 0 auto -60px;
-      }
-
-      #push,
-      #footer {
-        height: 60px;
-      }
-      #footer {
-        background-color: #f5f5f5;
-      }
-
-      @media (max-width: 767px) {
-        #footer {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }
-
-      #wrap > .container {
-        padding-top: 60px;
-      }
-      .container .credit {
-        margin: 20px 0;
-      }
-
-      code {
-        font-size: 80%;
-      }
-
+ 
     </style>
     
         <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
