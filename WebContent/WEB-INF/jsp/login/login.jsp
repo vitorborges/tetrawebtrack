@@ -11,50 +11,54 @@
     <!-- css externos -->
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<c:url value="/css/style_login.css"/>" rel="stylesheet" type="text/css" media="screen" />
     
     <!-- css-->
-    <style type="text/css">
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
-
-      .form-signin {
-        float: right;
-        max-width: 340px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
-    </style>
-
+    
   </head>
   <body>
 
     <div class="container">
 
-      <form class="form-signin">
-        <h1>Codigo HTML Login</h1>
+ <div class="row">
+	
+ </div>
+ <div style="margin-top:80px;">    
+   <div class="row">
+ 	 <div class="span2"></div>
+	   <div class="span4">	<img src="logo.jpg" class="img-polaroid"> </div>
+		 <div class="span5" style="padding-left:50px;">	
+		   <h3 style="padding-left:107px;">TETRA WEBTRACK </h3> 
+			<fieldset class="form-signin">
+			  <form class="form-horizontal">
+				<div class="control-group">
+				  <label>Usuário:</label>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-user"></i></span>
+						<input class="span3" id="prependedInput" type="text" placeholder="Usuário">
+					</div>
+				  </div>
+				  <div class="control-group">
+					<label>Senha:</label>
+					<div class="input-prepend">
+					  <span class="add-on"><i class="icon-lock"></i></span>
+					  <input class="span3" id="prependedInput" type="password" placeholder="Senha">
+					</div>
+				  </div>
+
+				  <div class="control-group" style="padding-left:10px";>
+				  	<a href="#">Esqueceu sua senha?</a>	
+
+				  </div>	
+				  <div class="control-group" style="padding-left:10px;">
+					<button type="submit" class="btn btn-info">Acessar</button>
+				  </div>
+			</form>
+			</fieldset>
+		
+		</div>
+	</div>
+</div>
     </div>
  
   </body>
