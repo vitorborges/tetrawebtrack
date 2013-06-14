@@ -5,14 +5,17 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 public class Usuario implements Serializable{
 
 		private static final long serialVersionUID = 1L;
 		@Id
-		@GeneratedValue
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Integer id;
 		@Column(length = 25, nullable = false)
 		private String nome;
@@ -24,8 +27,24 @@ public class Usuario implements Serializable{
 		private String email;
 		@Column(length = 15)
 		private String telefone;
+		@Column (length=10, nullable = false)
+		private String perfil;
+		@Type(type = "true_false")
+		private Boolean inativo;
+				
 		
-		
+		public String getPerfil() {
+			return perfil;
+		}
+		public void setPerfil(String perfil) {
+			this.perfil = perfil;
+		}
+		public Boolean getInativo() {
+			return inativo;
+		}
+		public void setInativo(Boolean inativo) {
+			this.inativo = inativo;
+		}
 		public Integer getId() {
 			return id;
 		}
@@ -66,6 +85,4 @@ public class Usuario implements Serializable{
 			return serialVersionUID;
 		}
 		
-		
-	
 }

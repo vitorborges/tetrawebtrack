@@ -10,7 +10,7 @@ public class JPAFactory {
 	 
     public static EntityManager getEntityManager() {
          if(factory == null) {
-              factory = Persistence.createEntityManagerFactory("tetraqi");
+              factory = Persistence.createEntityManagerFactory("default");
          }
          return factory.createEntityManager();
     }

@@ -32,7 +32,8 @@
            			<img src="<c:url value='/img/notificacao.png' />" alt="" />  
   		  			<input type="text" class="input-medium search-query" value="">
            			<img src="<c:url value='/img/usuario.png' />" alt="" /> 
-            		<a href="#" class="navbar-link">Analista de Sistemas</a> 
+            		<a href="#" class="navbar-link">${userSession.user.nome}</a> 
+                <a href="${pageContext.request.contextPath}/logout">Logout</a>
             		
             		<ul class="nav">
                          <li><a href="#"><img src="<c:url value='/img/helpdesk.png' />" alt="" /> </a></li>
