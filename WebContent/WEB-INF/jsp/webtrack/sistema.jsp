@@ -12,6 +12,24 @@
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
     
+    
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/jquery.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-transition.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-alert.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-modal.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-dropdown.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-scrollspy.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tab.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tooltip.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/avascript/bootstrap-popover.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-button.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-collapse.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-carousel.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-typeahead.js"/>"></script>
+
+    
 	<title>Tetra WebTrack</title>
 </head>
 <body> 
@@ -29,16 +47,45 @@
           			<div class="nav-collapse collapse">
             		<p class="navbar-text pull-right">
            			<img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
-           			<img src="<c:url value='/img/notificacao.png' />" alt="" />  
+           			
+           		
+           			<a a href="#myModal" data-toggle="modal"><img src="<c:url value='/img/notificacao.png' />" alt="" />  </a> 
   		  			<input type="text" class="input-medium search-query" value="">
            			<img src="<c:url value='/img/usuario.png' />" alt="" /> 
             		<a href="#" class="navbar-link">${userSession.user.nome}</a> 
                 <a href="${pageContext.request.contextPath}/logout">Logout</a>
-            		
+            		            		
             		<ul class="nav">
-                         <li><a href="#"><img src="<c:url value='/img/helpdesk.png' />" alt="" /> </a></li>
-                         <li><a href="#"><img src="<c:url value='/img/kb.png' />" alt="" /></a></li>
-                         <li><a  href="#"><img src="<c:url value='/img/projetos.png' />" alt="" /></a></li> 			 
+                         
+                  <li class="dropdown">
+                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/helpdesk.png' />" alt="" />  <b class="caret"></b></a>
+                 		<ul class="dropdown-menu">
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                		</ul>	
+                		
+                		<li class="dropdown">
+                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/kb.png' />" alt="" />  <b class="caret"></b></a>
+                 		<ul class="dropdown-menu">
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                		</ul>	
+                		
+                		<li class="dropdown">
+                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/projetos.png' />" alt="" />  <b class="caret"></b></a>
+                 		<ul class="dropdown-menu">
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                		</ul>	
             		</ul>
           </div>
         </div>
@@ -85,28 +132,31 @@
        <img src="<c:url value='/img/helpdesk.png' />" alt="" />
        <br>
        <br> 
-       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não resolvidos&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não atribuido&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets cancelados&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
        <br>
        <br>
        <button class="btn btn-inverse" type="button">Novo</button>
 	</div>
  	</div>
-
- <script src="javascript/jquery.js"></script>
-    <script src="javascript/bootstrap-transition.js"></script>
-    <script src="javascript/bootstrap-alert.js"></script>
-    <script src="javascript/bootstrap-modal.js"></script>
-    <script src="javascript/bootstrap-dropdown.js"></script>
-    <script src="javascript/bootstrap-scrollspy.js"></script>
-    <script src="javascript/bootstrap-tab.js"></script>
-    <script src="javascript/bootstrap-tooltip.js"></script>
-    <script src="javascript/bootstrap-popover.js"></script>
-    <script src="javascript/bootstrap-button.js"></script>
-    <script src="javascript/bootstrap-collapse.js"></script>
-    <script src="javascript/bootstrap-carousel.js"></script>
-    <script src="javascript/bootstrap-typeahead.js"></script>
+    
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-header">
+    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    	<h3 id="myModalLabel">Mensagens</h3>
+  		</div>
+  		<div class="modal-body">
+    	        <img src="<c:url value='/img/pessoa.png' />" alt="" />
+    	        <hr>
+    	        <img src="<c:url value='/img/pessoa.png' />" alt="" />
+    	        <hr>
+  		</div>
+  		<div class="modal-footer">
+    	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    	<button class="btn btn-info">Enviar nova Mensagem</button>
+  </div>
+</div>
     
 </body>
 </html>
