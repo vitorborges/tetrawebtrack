@@ -2,7 +2,6 @@
     <wb-module deploy-name="tetrawebtrack">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="context-root" value="tetrawebtrack"/>
         <property name="java-output-path" value="/tetrawebtrack/build/classes"/>
     </wb-module>

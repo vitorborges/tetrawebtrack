@@ -12,6 +12,24 @@
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
     
+    
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/jquery.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-transition.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-alert.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-modal.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-dropdown.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-scrollspy.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tab.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tooltip.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/avascript/bootstrap-popover.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-button.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-collapse.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-carousel.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-typeahead.js"/>"></script>
+
+    
 	<title>Tetra WebTrack</title>
 </head>
 <body> 
@@ -35,9 +53,36 @@
             		<a href="#" class="navbar-link">Analista de Sistemas</a> 
             		
             		<ul class="nav">
-                         <li><a href="#"><img src="<c:url value='/img/helpdesk.png' />" alt="" /> </a></li>
-                         <li><a href="#"><img src="<c:url value='/img/kb.png' />" alt="" /></a></li>
-                         <li><a  href="#"><img src="<c:url value='/img/projetos.png' />" alt="" /></a></li> 			 
+                         
+                  <li class="dropdown">
+                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/helpdesk.png' />" alt="" />  <b class="caret"></b></a>
+                 		<ul class="dropdown-menu">
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                		</ul>	
+                		
+                		<li class="dropdown">
+                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/kb.png' />" alt="" />  <b class="caret"></b></a>
+                 		<ul class="dropdown-menu">
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                		</ul>	
+                		
+                		<li class="dropdown">
+                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/projetos.png' />" alt="" />  <b class="caret"></b></a>
+                 		<ul class="dropdown-menu">
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
+                		</ul>		 
             		</ul>
           </div>
         </div>
@@ -92,20 +137,6 @@
        <button class="btn btn-inverse" type="button">Novo</button>
 	</div>
  	</div>
-
- <script src="javascript/jquery.js"></script>
-    <script src="javascript/bootstrap-transition.js"></script>
-    <script src="javascript/bootstrap-alert.js"></script>
-    <script src="javascript/bootstrap-modal.js"></script>
-    <script src="javascript/bootstrap-dropdown.js"></script>
-    <script src="javascript/bootstrap-scrollspy.js"></script>
-    <script src="javascript/bootstrap-tab.js"></script>
-    <script src="javascript/bootstrap-tooltip.js"></script>
-    <script src="javascript/bootstrap-popover.js"></script>
-    <script src="javascript/bootstrap-button.js"></script>
-    <script src="javascript/bootstrap-collapse.js"></script>
-    <script src="javascript/bootstrap-carousel.js"></script>
-    <script src="javascript/bootstrap-typeahead.js"></script>
     
 </body>
 </html>
