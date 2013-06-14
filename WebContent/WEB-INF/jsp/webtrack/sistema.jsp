@@ -82,7 +82,8 @@
                   		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
                   		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
                   		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                		</ul>		 
+                		</ul>	
+                		<li><img src="<c:url value='/img/tra_tetra.fw.png' />" alt="" /> </li>                			 
             		</ul>
           </div>
         </div>
