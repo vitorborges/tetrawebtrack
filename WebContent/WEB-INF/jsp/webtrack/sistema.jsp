@@ -47,11 +47,13 @@
           			<div class="nav-collapse collapse">
             		<p class="navbar-text pull-right">
            			<img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
-           			<img src="<c:url value='/img/notificacao.png' />" alt="" />  
+           			
+           		
+           			<a a href="#myModal" data-toggle="modal"><img src="<c:url value='/img/notificacao.png' />" alt="" />  </a> 
   		  			<input type="text" class="input-medium search-query" value="">
            			<img src="<c:url value='/img/usuario.png' />" alt="" /> 
             		<a href="#" class="navbar-link">Analista de Sistemas</a> 
-            		
+            		            		
             		<ul class="nav">
                          
                   <li class="dropdown">
@@ -83,7 +85,6 @@
                   		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
                   		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
                 		</ul>	
-                		<li><img src="<c:url value='/img/tra_tetra.fw.png' />" alt="" /> </li>                			 
             		</ul>
           </div>
         </div>
@@ -130,14 +131,28 @@
        <img src="<c:url value='/img/helpdesk.png' />" alt="" />
        <br>
        <br> 
-       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não resolvidos&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets não atribuido&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
+       <label>seus tickets cancelados&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
        <br>
        <br>
        <button class="btn btn-inverse" type="button">Novo</button>
 	</div>
  	</div>
+    
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Mensagens</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    <button class="btn btn-info">Enviar nova Mensagem</button>
+  </div>
+</div>
     
 </body>
 </html>
