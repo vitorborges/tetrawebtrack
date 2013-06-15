@@ -34,7 +34,7 @@ public class WebtrackController {
 		
 	}
 
-	@Path("")
+	@Path("/webtrack/visualizar")
 	public void visualizar(){
 		
 	}
