@@ -34,4 +34,8 @@ public class WebtrackController {
 		
 	}
 
+	@Path("")
+	public void visualizar(){
+		
+	}
 }

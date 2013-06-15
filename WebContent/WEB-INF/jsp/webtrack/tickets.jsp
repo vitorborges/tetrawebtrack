@@ -12,6 +12,22 @@
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
     
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/jquery.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-transition.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-alert.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-modal.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-dropdown.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-scrollspy.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tab.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tooltip.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/avascript/bootstrap-popover.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-button.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-collapse.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-carousel.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-typeahead.js"/>"></script>
+    
 	<title>Tetra WebTrack</title>
 </head>
 <body> 
@@ -81,13 +97,32 @@
                   <td>Otto</td>
                   <td>@TwBootstrap</td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                
+                 <tr>
+                  <td>3</td>
+                  <td>Larry the Bird</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
                 </tr>
-                <tr>
+                 <tr>
+                  <td>3</td>
+                  <td>Larry the Bird</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                 <tr>
+                  <td>3</td>
+                  <td>Larry the Bird</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                 <tr>
+                  <td>3</td>
+                  <td>Larry the Bird</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                 <tr>
                   <td>3</td>
                   <td>Larry the Bird</td>
                   <td>Larry the Bird</td>
