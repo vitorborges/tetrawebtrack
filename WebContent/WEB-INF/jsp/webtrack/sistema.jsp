@@ -156,7 +156,6 @@
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
     	<button class="btn btn-info">Enviar nova Mensagem</button>
   </div>
-</div>
-    
+</div
 </body>
 </html>
