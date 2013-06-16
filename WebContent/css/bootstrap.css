@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v2.3.2
+ * Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -7,6 +7,8 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+
+
 
 .clearfix {
   *zoom: 1;
@@ -109,7 +111,7 @@ img {
 
 #map_canvas img,
 .google-maps img {
-  max-width: none;
+  max-width: none;	
 }
 
 button,
@@ -3009,15 +3011,6 @@ table th[class*="span"],
   display: block;
 }
 
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 990;
-}
-
 .pull-right > .dropdown-menu {
   right: 0;
   left: auto;
@@ -4100,12 +4093,11 @@ input[type="submit"].btn.btn-mini {
           border-radius: 5px;
 }
 
-<!-- CSS Menu Direito -->
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   color: #ffffff;
-  background-color: #D20000	;
+  background-color: #0088cc;
 }
 
 .nav-stacked > li {
@@ -4792,7 +4784,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #2D2D2D;
+  background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
   background-image: -webkit-linear-gradient(top, #222222, #111111);

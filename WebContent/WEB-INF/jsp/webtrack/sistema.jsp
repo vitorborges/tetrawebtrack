@@ -50,7 +50,7 @@
            			
            		
            			<a a href="#myModal" data-toggle="modal"><img src="<c:url value='/img/notificacao.png' />" alt="" />  </a> 
-  		  			<input type="text" class="input-medium search-query" value="">
+  		  			<input type="text" class="input-medium search-query" placeholder="id_ticket">
            			<img src="<c:url value='/img/usuario.png' />" alt="" /> 
             		<a href="#" class="navbar-link">${userSession.user.nome}</a> 
                 <a href="${pageContext.request.contextPath}/logout">Logout</a>
@@ -156,7 +156,6 @@
     	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
     	<button class="btn btn-info">Enviar nova Mensagem</button>
   </div>
-</div>
-    
+
 </body>
 </html>
