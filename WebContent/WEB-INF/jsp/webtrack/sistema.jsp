@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-	<!-- css -->
+	<!-- css  -->
     <link href="<c:url value="/css/style_body.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />

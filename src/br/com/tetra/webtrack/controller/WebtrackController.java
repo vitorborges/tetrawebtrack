@@ -19,7 +19,7 @@ public class WebtrackController {
         this.business = business;
     }
 
-	@Get("/webtrack/sistema")
+	@Get("/sistema")
 	public void sistema(){
 		
 	}
@@ -29,9 +29,5 @@ public class WebtrackController {
 		result.redirectTo(this).sistema();
 	}
 	
-	@Path("/webtrack/tickets")
-	public void tickets(){
-		
-	}
 
 }
