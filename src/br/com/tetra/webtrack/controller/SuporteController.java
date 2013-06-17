@@ -1,5 +1,6 @@
 package br.com.tetra.webtrack.controller;
 
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.session.UserSession;
@@ -16,6 +17,7 @@ public class SuporteController {
     }
     
 
+    @Get("/suporte/tickets")
 	public void tickets(){
 		
 	}

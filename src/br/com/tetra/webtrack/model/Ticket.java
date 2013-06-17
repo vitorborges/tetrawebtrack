@@ -17,5 +17,6 @@ public class Ticket {
 	private long id;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar dtabertura;
+	
 
 }
