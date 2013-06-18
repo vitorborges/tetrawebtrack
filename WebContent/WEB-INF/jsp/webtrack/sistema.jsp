@@ -1,161 +1,96 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-	<!-- css  -->
-    <link href="<c:url value="/css/style_body.css"/>" rel="stylesheet" type="text/css" media="screen" />
-    <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
-    <link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
-    
-    
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap.min.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/jquery.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-transition.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-alert.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-modal.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-dropdown.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-scrollspy.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tab.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-tooltip.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/avascript/bootstrap-popover.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-button.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-collapse.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-carousel.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/javascript/bootstrap-typeahead.js"/>"></script>
-
-    
+	<meta charset="utf-8">
+	<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css" media="screen" />
+	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
+	<link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
 	<title>Tetra WebTrack</title>
 </head>
-<body> 
-<div class="navbar navbar-inverse navbar-fixed-top">
-     <div class="navbar-inner">
-     	<div class="container-fluid">
-       		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-       		<span class="icon-bar"></span>
-       		<span class="icon-bar"></span>
-       		<span class="icon-bar"></span>
-       
-       			</button>
-          			<a class="brand" href="#">Tetra WebTrack</a>
-          			<!-- Direito -->
-          			<div class="nav-collapse collapse">
-            		<p class="navbar-text pull-right">
-           			<img src="<c:url value='/img/configuracoes.png' />" alt="" /> 
-           			
-           		
-           			<a a href="#myModal" data-toggle="modal"><img src="<c:url value='/img/notificacao.png' />" alt="" />  </a> 
-  		  			<input type="text" class="input-medium search-query" placeholder="id_ticket">
-           			<img src="<c:url value='/img/usuario.png' />" alt="" /> 
-            		<a href="#" class="navbar-link">${userSession.user.nome}</a> 
-                <a href="${pageContext.request.contextPath}/logout">Logout</a>
-            		            		
-            		<ul class="nav">
-                         
-                  <li class="dropdown">
-                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/helpdesk.png' />" alt="" />  <b class="caret"></b></a>
-                 		<ul class="dropdown-menu">
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                		</ul>	
-                		
-                		<li class="dropdown">
-                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/kb.png' />" alt="" />  <b class="caret"></b></a>
-                 		<ul class="dropdown-menu">
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                		</ul>	
-                		
-                		<li class="dropdown">
-                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value='/img/projetos.png' />" alt="" />  <b class="caret"></b></a>
-                 		<ul class="dropdown-menu">
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                  		<li><a href="produtos/cadastro">Tetra Soluções</a></li>
-                		</ul>	
-            		</ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-     <div class="container-fluid">
-     
-    <!-- Chamados -->
-	<div class="body-sistema">
-		<legend>Chamados</legend>
-       <img src="<c:url value='/img/helpdesk.png' />" alt="" />
-       <br>
-       <br> 
-       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
-       <br>
-       <br>
-       <button class="btn btn-inverse" type="button">Novo</button>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="#">Webtrack</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Helpdesk</a></li>
+						<li><a href="#">KB</a></li>
+						<li><a href="#">Projetos</a></li>
+					</ul>
+					<form class="navbar-search pull-left">
+						<input type="text" class="search-query" placeholder="">
+					</form>
+					<ul class="nav pull-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value="/img/usuario.png"/>"> ${userSession.user.nome} <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">ConfiguraÃ§Ãµes</a></li>
+								<!-- <li class="divider"></li> -->
+								<li><a href="#">Sair</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-	
-	<!-- Base De Conhecimento -->
-	<div class="body-sistema">
-		<legend>Base de Conhecimento</legend>
-       <img src="<c:url value='/img/helpdesk.png' />" alt="" />
-       <br>
-       <br> 
-       <label>seus tickets não resolvidos <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets não atribuido <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
-       <br>
-       <br>
-       <button class="btn btn-inverse" type="button">Novo</button>
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="span4">
+					<legend>Chamados</legend>
+					<img src="<c:url value='/img/helpdesk.png' />" alt="" />
+					<label>seus tickets nÃ£o resolvidos <span class="badge badge-inverse">10</span></label>
+					<label>seus tickets nÃ£o atribuido <span class="badge badge-inverse">10</span></label>
+					<label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+					<button class="btn btn-inverse" type="button">Novo</button>
+				</div>
+				<div class="span4">
+					<legend>Chamados</legend>
+					<img src="<c:url value='/img/helpdesk.png' />" alt="" />
+					<label>seus tickets nÃ£o resolvidos <span class="badge badge-inverse">10</span></label>
+					<label>seus tickets nÃ£o atribuido <span class="badge badge-inverse">10</span></label>
+					<label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+					<button class="btn btn-inverse" type="button">Novo</button>
+				</div>
+				<div class="span4">
+					<legend>Chamados</legend>
+					<img src="<c:url value='/img/helpdesk.png' />" alt="" />
+					<label>seus tickets nÃ£o resolvidos <span class="badge badge-inverse">10</span></label>
+					<label>seus tickets nÃ£o atribuido <span class="badge badge-inverse">10</span></label>
+					<label>seus tickets cancelados <span class="badge badge-inverse">10</span></label>
+					<button class="btn btn-inverse" type="button">Novo</button>
+				</div>
+			</div>
+		</div>
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>
+				<h3 id="myModalLabel">Mensagens</h3>
+			</div>
+			<div class="modal-body">
+				<img src="<c:url value='/img/pessoa.png' />" alt="" />
+				<hr>
+				<img src="<c:url value='/img/pessoa.png' />" alt="" />
+				<hr>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+				<button class="btn btn-info">Enviar nova Mensagem</button>
+			</div>
+		</div>
 	</div>
-	
-	<!-- implantações -->
-	<div class="body-sistema">
-	   <legend>Implantações</legend>
-       <img src="<c:url value='/img/helpdesk.png' />" alt="" />
-       <br>
-       <br> 
-       <label>seus tickets não resolvidos&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets não atribuido&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
-       <label>seus tickets cancelados&nbsp;&nbsp; <span class="badge badge-inverse">10</span></label>
-       <br>
-       <br>
-       <button class="btn btn-inverse" type="button">Novo</button>
-	</div>
- 	</div>
-    
-    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  		<div class="modal-header">
-    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    	<h3 id="myModalLabel">Mensagens</h3>
-  		</div>
-  		<div class="modal-body">
-    	        <img src="<c:url value='/img/pessoa.png' />" alt="" />
-    	        <hr>
-    	        <img src="<c:url value='/img/pessoa.png' />" alt="" />
-    	        <hr>
-  		</div>
-  		<div class="modal-footer">
-    	<button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
-    	<button class="btn btn-info">Enviar nova Mensagem</button>
-  </div>
-
 </body>
-</html>
