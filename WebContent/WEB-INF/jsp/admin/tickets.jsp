@@ -12,7 +12,36 @@
 	<title>Tetra WebTrack</title>
 </head>
 <body>
-	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<i class="icon-search icon-white"></i>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">Tetra WebTrack</a>
+				<div class="nav-collapse collapse">
+					<p class="navbar-text pull-right"></p>
+					<img src="<c:url value='/img/configuracoes.png' />" alt="" />
+					<img src="<c:url value='/img/notificacao.png' />" alt="" />
+					<input type="text" class="input-medium search-query" value="">
+					<img src="<c:url value='/img/usuario.png' />" alt="" />
+					<a href="#" class="navbar-link">Analista de Sistemas</a>
+					<ul class="nav">
+						<li><a href="#"><img src="<c:url value='/img/helpdesk.png' />" alt="" /> </a></li>
+						<li><a href="#"><img src="<c:url value='/img/kb.png' />" alt="" /></a></li>
+						<li><a  href="#"><img src="<c:url value='/img/projetos.png' />" alt="" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
 	<div class="container-fluid">
 		<div class="dv-acesso-facil">
 			<label>seus tickets não resolvidos&nbsp;&nbsp; <span class="badge badge-inverse">0</span></label>
