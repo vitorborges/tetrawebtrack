@@ -28,6 +28,9 @@
 							<li><a href="${pageContext.request.contextPath}/suporte/tickets">Chamados</a></li>
 							<li><a href="#">KB</a></li>
 							<li><a href="#">Implantações</a></li>
+							<!-- <li><a href="${pageContext.request.contextPath}/suporte/tickets"><img src="<c:url value="/img/helpdesk.png"/>"></a></li> -->
+							<!-- <li><a href="#"><img src="<c:url value="/img/kb.png"/>"></a></li> -->
+							<!-- <li><a href="#"><img src="<c:url value="/img/projetos.png"/>"></a></li> -->
 						</ul>
 						<ul class="nav pull-right">
 							<li class="dropdown">
@@ -77,6 +80,17 @@
 						<label>Concluidas <span class="badge badge-success pull-right">4</span></label>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar navbar-inverse navbar-fixed-bottom">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
 			</div>
 		</div>
 	</div>
