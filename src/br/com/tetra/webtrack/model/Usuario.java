@@ -1,12 +1,15 @@
 package br.com.tetra.webtrack.model;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Type;
 
@@ -31,7 +34,15 @@ public class Usuario implements Serializable{
 		private String perfil;
 		@Type(type = "true_false")
 		private Boolean inativo;
-				
+		
+		//RELACIONAMENTOS
+		
+		@OneToMany(mappedBy="usuario", fetch=FetchType.LAZY)
+		private Collection<Atendimento> atendimentos;
+		@OneToMany(mappedBy="usuario", fetch=FetchType.LAZY)
+		private Collection<Ticket> tickets;
+		
+		// getters and setters		
 		
 		public String getPerfil() {
 			return perfil;
@@ -80,6 +91,19 @@ public class Usuario implements Serializable{
 		}
 		public void setTelefone(String telefone) {
 			this.telefone = telefone;
+		}
+		
+		public Collection<Atendimento> getAtendimentos() {
+			return atendimentos;
+		}
+		public void setAtendimentos(Collection<Atendimento> atendimentos) {
+			this.atendimentos = atendimentos;
+		}
+		public Collection<Ticket> getTickets() {
+			return tickets;
+		}
+		public void setTickets(Collection<Ticket> tickets) {
+			this.tickets = tickets;
 		}
 		public static long getSerialversionuid() {
 			return serialVersionUID;

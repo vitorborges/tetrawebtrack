@@ -1,15 +1,21 @@
 package br.com.tetra.webtrack.model;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Cliente {
 
-	@Id @GeneratedValue
-	private Integer id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_cliente")
+	private long id;
 	@Column(length = 11 , nullable = false)
 	private String cnpj;
 	@Column(length = 50, nullable = false)
@@ -33,12 +39,25 @@ public class Cliente {
 	@Column(length = 20, nullable = false)
 	private String responsavel;
 	
+	// RELACIONAMENTOS
+	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY)
+	private Collection<Ticket> tickets;
 	
-	public Integer getId() {
+	
+	
+	//getters and setters
+	
+	public long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(long id) {
 		this.id = id;
+	}
+	public Collection<Ticket> getTickets() {
+		return tickets;
+	}
+	public void setTickets(Collection<Ticket> tickets) {
+		this.tickets = tickets;
 	}
 	public String getCnpj() {
 		return cnpj;

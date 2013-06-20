@@ -19,16 +19,13 @@ public class Grupo {
 	private String nome;
 	@Column (length = 120)
 	private String descricao;
+	
+	//RELACIONAMENTOS
 	@OneToMany(mappedBy = "grupo", fetch = FetchType.LAZY)
 	private Collection<Ticket> tickets;
 	
+	// getters and setters
 	
-	public Collection<Ticket> getTickets() {
-		return tickets;
-	}
-	public void setTickets(Collection<Ticket> tickets) {
-		this.tickets = tickets;
-	}
 	public Long getId() {
 		return id;
 	}
@@ -47,6 +44,11 @@ public class Grupo {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
+	public Collection<Ticket> getTickets() {
+		return tickets;
+	}
+	public void setTickets(Collection<Ticket> tickets) {
+		this.tickets = tickets;
+	}
 	
 }
