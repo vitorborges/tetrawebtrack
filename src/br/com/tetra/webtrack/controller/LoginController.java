@@ -31,15 +31,22 @@ public class LoginController {
 	    @Public
 	    @Post("/autenticar")
 	    public void autenticar(Usuario usuario) {
-	        Usuario user = business.autenticar(usuario.getEmail(), usuario.getSenha());
-
-	        if (user != null) {
+	    	Usuario user = business.autenticar(usuario.getEmail(), usuario.getSenha());
+	    	if (usuario.getEmail() == "") {
+	    		result.include("error", "Favor informar o campo Usuário").redirectTo(this).login();
+	    		return;
+	    	}
+	    	if	(usuario.getSenha() == "") {
+	    		result.include("error", "Favor informar o campo Senha").redirectTo(this).login();
+	    		return;
+	    	}
+	    	if (user != null) {
 	            userSession.setUser(user);
-
 	            result.redirectTo(WebtrackController.class).sistema();
-	        } else {
-	            result.include("error", "E-mail ou senha incorreta!").redirectTo(this).login();
 	        }
+	    	else {
+	            result.include("error", "E-mail ou senha incorreta!").redirectTo(this).login();
+	    	}
 	    }
 
 	    @Get("/logout")

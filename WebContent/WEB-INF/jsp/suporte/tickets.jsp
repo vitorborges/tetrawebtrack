@@ -51,51 +51,42 @@
 	</header>
 	<div class="wrapper">
 		<div class="container">
-			<div class="dv-acesso-facil">
-				<label>seus tickets não resolvidos&nbsp;&nbsp; <span class="badge badge-inverse">0</span></label>
-				<label>seus tickets não atribuido &nbsp;&nbsp;&nbsp; <span class="badge badge-inverse">4</span></label>
-				<label>seus tickets cancelados &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="badge badge-inverse">4</span></label>
-			</div>
-			<div class="dv-tickets-grid">
-				<legend>Filtro</legend>
-				<input type="text" placeholder="">
-				<table class="table table-bordered">
-					<thead>
-						<tr>
-							<th>Ticket</th>
-							<th>Cliente</th>
-							<th>Last Na</th>
-							<th>Username</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@TwBootstrap</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Larry the Bird</td>
-							<td>Larry the Bird</td>
-							<td>@twitter</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Ticket</th>
+						<th>Cliente</th>
+						<th>Last Na</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@TwBootstrap</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Larry the Bird</td>
+						<td>Larry the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<div class="navbar navbar-inverse navbar-fixed-bottom">
