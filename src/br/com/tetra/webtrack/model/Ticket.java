@@ -18,6 +18,7 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.Type;
 
 @Entity
 public class Ticket {
@@ -34,6 +35,8 @@ public class Ticket {
 	private String status;
 	private String tipo;
 	private String prioridade;
+	@Type(type = "true_false")
+	private Boolean pegajoso;
 	@Column(length = 25, nullable=false)
 	private String contato;
 	@Lob
@@ -85,6 +88,13 @@ public class Ticket {
 	}
 	public void setPrioridade(String prioridade) {
 		this.prioridade = prioridade;
+	}
+	
+	public Boolean getPegajoso() {
+		return pegajoso;
+	}
+	public void setPegajoso(Boolean pegajoso) {
+		this.pegajoso = pegajoso;
 	}
 	public String getProblema() {
 		return problema;

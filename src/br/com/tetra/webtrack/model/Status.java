@@ -10,6 +10,7 @@ public enum Status {
 	AGUARDANDO("Aguardando"),
 	CANCELADO("Cancelado"),
 	SOLUCIONADO("Solucionado"),
+	REABERTO("Reaberto"),
 	FECHADO("Fechado");
 	
 	private String label;

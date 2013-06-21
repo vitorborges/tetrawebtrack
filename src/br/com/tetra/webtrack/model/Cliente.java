@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 public class Cliente {
 
@@ -38,6 +40,8 @@ public class Cliente {
 	private String fone2;
 	@Column(length = 20, nullable = false)
 	private String responsavel;
+	@Type (type="true_false")
+	private Boolean inativo;
 	
 	// RELACIONAMENTOS
 	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY)
@@ -125,7 +129,11 @@ public class Cliente {
 	public void setResponsavel(String responsavel) {
 		this.responsavel = responsavel;
 	}
-	
-	
+	public Boolean getInativo() {
+		return inativo;
+	}
+	public void setInativo(Boolean inativo) {
+		this.inativo = inativo;
+	}
 	
 }
