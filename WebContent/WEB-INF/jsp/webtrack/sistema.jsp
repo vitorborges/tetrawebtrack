@@ -9,7 +9,7 @@
 	<link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link rel="shortcut icon" href="<c:url value="/img/logo.png"/>" />
-	<title>WebTrack</title>
+	<title>Tetra WebTrack</title>
 </head>
 <body>
 	<header>
@@ -21,15 +21,34 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="${pageContext.request.contextPath}">Webtrack</a>
+					<a class="brand" href="${pageContext.request.contextPath}">Tetra Webtrack</a>
 					<div class="nav-collapse collapse">
+					
 						<ul class="nav">
-							<li><a href="${pageContext.request.contextPath}/suporte/tickets">Chamados</a></li>
-							<li><a href="#">KB</a></li>
-							<li><a href="#">Implantações</a></li>
-							<!-- <li><a href="${pageContext.request.contextPath}/suporte/tickets"><img src="<c:url value="/img/helpdesk.png"/>"></a></li> -->
-							<!-- <li><a href="#"><img src="<c:url value="/img/kb.png"/>"></a></li> -->
-							<!-- <li><a href="#"><img src="<c:url value="/img/projetos.png"/>"></a></li> -->
+						<li class="divider-vertical"></li>
+							
+							<!-- MENU PRINCIPAL DA APLICAÇÃO -->
+							<li><a href="${pageContext.request.contextPath}/suporte/tickets"><img src="<c:url value="/img/helpdesk.png"/>"><span> HelpDesk</span></a></li>
+							<li><a href="${pageContext.request.contextPath}/suporte/tickets"><img src="<c:url value="/img/kb.png"/>"><span> KB</span></a></li>
+							<li><a href="${pageContext.request.contextPath}/suporte/tickets"><img src="<c:url value="/img/projetos.png"/>"><span> Projetos</span></a></li>
+							
+							<!-- MENU CADASTROS -->
+							<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value="/img/cadastros.png"/>"><span> Cadastros</span> </a>
+                                
+                                <ul class="dropdown-menu">    
+                                    <li>
+                                        <a href="#"><i class=" icon-plus"></i> Cliente</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-adjust"></i> Grupo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon-user"></i> Usuário</a>
+                                    </li>
+                                </ul>
+                            </li>
+							
 						</ul>
 						<ul class="nav pull-right">
 							<li class="dropdown">
@@ -42,7 +61,7 @@
 							</li>
 						</ul>
 						<form class="navbar-search pull-right">
-							<input type="text" class="search-query" placeholder="">
+							<input type="text" class="search-query" placeholder="" value="#id_ticket">
 						</form>
 					</div>
 				</div>
@@ -92,6 +111,7 @@
 				</a> -->
 			</div>
 		</div>
+		
 	</div>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
