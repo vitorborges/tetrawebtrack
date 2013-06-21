@@ -18,7 +18,7 @@ public class LoginBusiness {
     }
 
     public Usuario autenticar(String email, String senha) {
-        try {
+    	try {
             Query query = manager.createQuery("from Usuario where email = :email and senha = md5(:senha)");
             query.setParameter("email", email);
             query.setParameter("senha", senha);

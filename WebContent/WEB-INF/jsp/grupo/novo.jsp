@@ -72,44 +72,43 @@
 		<div class="container">
 			<div class="row">
 				<div class="span4">
-					<div class="hero-unit">
-						<h4>Chamados</h4>
-						<!-- <img src="<c:url value='/img/helpdesk.png' />" alt="" /> -->
-						<label>Pendentes <span class="badge badge-important pull-right">5</span></label>
-						<label>Resolvidos <span class="badge badge-success pull-right">7</span></label>
-						<label>Cancelados <span class="badge badge-important pull-right">2</span></label>
+				<div class="well">
+				<form>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Cadastro de Grupo</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label">Nome:</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="Nome" class="input-xlarge" required="">
+    
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">Descrição:</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" placeholder="Descrição" class="input-xlarge">
+    
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label"></label>
+  <div class="controls">
+    <button id="button1id" name="button1id" class="btn btn-success">Gravar</button>
+    <button id="button2id" name="button2id" class="btn btn-danger">Cancelar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
 					</div>
-				</div>
-				<div class="span4">
-					<div class="hero-unit">
-						<h4>Base de conhecimento</h4>
-						<!-- <img src="<c:url value='/img/helpdesk.png' />" alt="" /> -->
-						<label>Em aprovação <span class="badge badge-info pull-right">4</span></label>
-						<label>Adicionadas recentemente<span class="badge badge-warning pull-right">3</span></label>
-						<label>Rejeitadas <span class="badge badge-info pull-right">0</span></label>
 					</div>
-				</div>
-				<div class="span4">
-					<div class="hero-unit">
-						<h4>Implantações</h4>
-						<!-- <img src="<c:url value='/img/helpdesk.png' />" alt="" /> -->
-						<label>Em andamento <span class="badge pull-right">1</span></label>
-						<label>Agendadas <span class="badge badge-important pull-right">3</span></label>
-						<label>Concluidas <span class="badge badge-success pull-right">4</span></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="navbar-inner">
-			<div class="container">
-				<!-- <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a> -->
-			</div>
 		</div>
 		
 	</div>
