@@ -5,30 +5,31 @@ import javax.persistence.EntityTransaction;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.tetra.webtrack.jpa.JPAFactory;
-import br.com.tetra.webtrack.model.Grupo;
+import br.com.tetra.webtrack.model.Usuario;
 
 @Component
-public class GrupoBusiness {
+public class UsuarioBusiness {
 
 	private EntityManager manager;
-
-	public GrupoBusiness() {
+	
+	public UsuarioBusiness() {
 		this.manager = JPAFactory.getEntityManager();
 	}
-
-	public void gravarGrupo(Grupo grupo) {
+	
+	public void gravaUsuario(Usuario usuario){
 		try {
 			EntityTransaction transaction = manager.getTransaction();
 			transaction.begin();
-			manager.persist(grupo);
+			manager.persist(usuario);
 			transaction.commit();
 			manager.close();
 		} catch (Exception ex) {
 			//
 		}
 	}
-
-	public void listagemGrupo() {
-
+	
+	public void listagemUsuario(){
+		
 	}
+	
 }
