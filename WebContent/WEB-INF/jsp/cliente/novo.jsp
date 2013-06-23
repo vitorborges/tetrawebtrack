@@ -15,6 +15,11 @@
   </head>
   <body>
   
+  	<header>
+		<%@ include file="/decorators/header.jsp" %>
+	</header>
+  
+  <div class="well"> 
   <form class="form-horizontal">
 <fieldset>
 
@@ -118,6 +123,8 @@
 
 </fieldset>
 </form>
-  
-	
+  </div>
+	<footer>
+		<%@ include file="/decorators/footer.jsp" %>
+	</footer>
   </body>
