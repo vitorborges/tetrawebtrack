@@ -107,3 +107,11 @@ code {
 .login {
   margin-left: 50px;
 }      
+
+
+
+.div-grupo-grid{
+	float: center;
+	max-width: 700px;
+	padding-top: 50px; 
+}
