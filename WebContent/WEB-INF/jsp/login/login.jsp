@@ -42,7 +42,13 @@
 						<c:if test="${not empty error}">
 						<div class="alert alert-error">
 							<button class="close" data-dismiss="alert">&times;</button>
-							${error}
+							${error} 
+						</div>
+					</c:if>
+					<c:if test="${not empty success}">
+						<div class="alert alert-success">
+							<button class="close" data-dismiss="alert">&times;</button>
+							${success}
 						</div>
 					</c:if>
 				</form>
@@ -53,15 +59,15 @@
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		<h3 id="myModalLabel">Solicitar Senha</h3>
+		<h3 id="myModalLabel">Recuperar Senha</h3>
 	</div>
 	<div class="modal-body">
-		<form class="form-inline" action="http://google.com">
+		<form class="form-inline" action="${pageContext.request.contextPath}/enviarsenha" method="get">
 			<div class="input-prepend">
 				<span class="add-on"><i class="icon-envelope"></i></span>
-				<input class="span4" id="prependedInput" type="text" placeholder="Email">
+				<input class="span4" id="prependedInput" type="text" placeholder="Email" name="email">
 			</div>
-			<button type="submit" class="btn btn-info">Solicitar Senha</button>
+			<button type="submit" class="btn btn-info">enviar</button>
 		</form>
 	</div>
 	<div class="modal-footer"></div>

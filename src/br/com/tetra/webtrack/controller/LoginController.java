@@ -6,8 +6,11 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.annotation.Public;
 import br.com.tetra.webtrack.business.LoginBusiness;
+import br.com.tetra.webtrack.dao.UsuarioDAO;
 import br.com.tetra.webtrack.model.Usuario;
 import br.com.tetra.webtrack.session.UserSession;
+import br.com.tetra.webtrack.util.Email;
+import br.com.tetra.webtrack.util.Utils;
 
 @Resource
 public class LoginController {
@@ -15,11 +18,13 @@ public class LoginController {
 	    private Result result;
 	    private UserSession userSession;
 	    private LoginBusiness business;
+	    private UsuarioDAO usuariodao;
 
-	    public LoginController(Result result, UserSession userSession, LoginBusiness business) {
+	    public LoginController(Result result, UserSession userSession, LoginBusiness business, UsuarioDAO usuariodao) {
 	        this.result = result;
 	        this.userSession = userSession;
 	        this.business = business;
+	        this.usuariodao = usuariodao;
 	    }
 
 	    @Public
@@ -53,5 +58,28 @@ public class LoginController {
 	    public void logout() {
 	        userSession.logout();
 	        result.redirectTo(this).login();
+	    }
+	    
+	    @Public
+	    @Get("/enviarsenha")
+	    public void enviarsenha(String email) throws Exception {
+	    	Usuario user = usuariodao.emailexiste(email);
+	    	if (user == null) {
+	    		result.include("error", "E-mail não cadastrado.").redirectTo(this).login();
+	    	} else {
+	    	String senhaaux = Utils.gerasenha();
+	    	
+	    	user.setSenha(Utils.md5(senhaaux));
+	    	
+	    	Email e = new Email();
+	    	senhaaux = e.enviar(email, senhaaux);
+	    	
+	    		if (senhaaux != null) {
+	    			usuariodao.gravar(user);
+	    			result.include("success", "E-mail enviado com sucesso!").redirectTo(this).login();
+	    		} else {
+	    			result.include("error","Erro no envio do e-mail.").redirectTo(this).login();
+	    		}
+	    	}
 	    }
 }

@@ -5,7 +5,6 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.tetra.webtrack.jpa.JPAFactory;
 import br.com.tetra.webtrack.model.Usuario;
 
 @Component
@@ -13,8 +12,8 @@ public class LoginBusiness {
 	
 	private EntityManager manager;
 
-    public LoginBusiness() {
-        this.manager = JPAFactory.getEntityManager();
+    public LoginBusiness(EntityManager manager) {
+        this.manager = manager;
     }
 
     public Usuario autenticar(String email, String senha) {
