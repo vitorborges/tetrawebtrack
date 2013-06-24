@@ -72,7 +72,8 @@ public class LoginController {
 	    	user.setSenha(Utils.md5(senhaaux));
 	    	
 	    	Email e = new Email();
-	    	senhaaux = e.enviar(email, senhaaux);
+	    	senhaaux = e.enviar(email, "Recuperação de senha." ,"Sua senha foi recuperada. A sua senha é: " +
+	    	senhaaux + " . E-mail automático não responda.");
 	    	
 	    		if (senhaaux != null) {
 	    			usuariodao.gravar(user);

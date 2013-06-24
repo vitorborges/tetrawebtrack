@@ -18,7 +18,7 @@ public class Email {
 		this.dao = new ConfigDAO();
 	}
 	
-	public String enviar(String email, String senha) throws EmailException, UnsupportedEncodingException {
+	public String enviar(String email, String subject, String mensagen) throws EmailException, UnsupportedEncodingException {
 		
 		try {
 			
@@ -36,10 +36,9 @@ public class Email {
 		   //Configure o seu email do qual enviará
 		   e.setFrom(config.getEmaillogin(), "Tetra WebTrack E-mail Robot");
 		   //Adicione um assunto
-		   e.setSubject("Recuperação de senha");
+		   e.setSubject(subject);
 		   //Adicione a mensagem do email
-		   e.setMsg("A sua senha é: " + senha +
-		   		"Não responda este e-mail");
+		   e.setMsg(mensagen);
 		   //Para autenticar no servidor é necessário chamar os dois métodos abaixo
 		   System.out.println("autenticando...");
 		   e.setSSLCheckServerIdentity(true);
