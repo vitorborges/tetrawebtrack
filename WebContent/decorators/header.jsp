@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
@@ -12,22 +15,27 @@
 				<ul class="nav">
 					<li>
 						<a href="${pageContext.request.contextPath}/suporte/tickets">
-							<i class="icon-desktop icon-2x"></i> <span>HelpDesk</span>
+							<i class="icon-desktop"></i> <span>Chamados</span>
+						</a>
+					</li>
+					<li>
+						<a href="${pageContext.request.contextPath}/suporte/presencial">
+							<i class="icon-male"></i> <span>Presencial</span>
 						</a>
 					</li>
 					<li>
 						<a href="${pageContext.request.contextPath}/suporte/kb">
-							<i class="icon-cloud icon-2x"></i> <span>KB</span>
+							<i class="icon-cloud"></i> <span>KB</span>
 						</a>
 					</li>
 					<li>
 						<a href="${pageContext.request.contextPath}/suporte/projetos">
-							<i class="icon-check icon-2x"></i> <span>Implantações</span>
+							<i class="icon-check"></i> <span>Implantações</span>
 						</a>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="icon-folder-open icon-2x"></i> <span>Cadastros</span>
+							<i class="icon-folder-open"></i> <span>Cadastros</span>
 						</a>
 						<ul class="dropdown-menu">
 							<li>
@@ -44,12 +52,12 @@
 				</ul>
 				<ul class="nav pull-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-2x"></i> ${userSession.user.nome} <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> ${userSession.user.nome} <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<c:if test="${userSession.user.perfil == 'ADMIN'}">
 							<li><a href="#"><i class="icon-gear"></i> Configurações</a></li>
 						</c:if>
-						<li><a href="#"><i class="icon-key"></i> Alterar senha</a></li>
+						<li><a href="#"><i class="icon-lock"></i> Alterar senha</a></li>
 						<li class="divider"></li>
 						<li><a href="${pageContext.request.contextPath}/logout"><i class="icon-off"></i> Sair</a></li>
 					</ul>

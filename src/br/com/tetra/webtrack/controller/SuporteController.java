@@ -10,15 +10,18 @@ public class SuporteController {
 	private Result result;
     private UserSession userSession;
 
-
     public SuporteController(Result result, UserSession userSession) {
         this.result = result;
         this.userSession = userSession;
     }
     
-
     @Get("/suporte/tickets")
-	public void tickets(){
+	public void tickets() {
 		
 	}
+    
+    @Get("/suporte/presencial")
+    public void presencial() {
+    	
+    }
 }

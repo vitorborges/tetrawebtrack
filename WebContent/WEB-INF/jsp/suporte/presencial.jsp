@@ -35,10 +35,11 @@
 								<th>Término</th>
 								<th>Estado</th>
 								<th>Técnico</th>
+								<th>Observação</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<!-- <tr>
 								<td>1</td>
 								<td>Ipiranga HC</td>
 								<td>Balcão não funciona</td>
@@ -127,7 +128,7 @@
 								<td></td>
 								<td>Pendente</td>
 								<th>Marcus</th>
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>

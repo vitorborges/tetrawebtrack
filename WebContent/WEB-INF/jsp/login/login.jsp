@@ -22,14 +22,14 @@
 							<label>Usuário:</label>
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-user"></i></span>
-								<input class="span3" id="prependedInput" type="text" placeholder="Usuário" name="usuario.email">
+								<input class="span3" id="prependedInput" type="text" placeholder="Usuário" name="usuario.email" required>
 							</div>
 						</div>
 						<div class="control-group">
 							<label>Senha:</label>
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-lock"></i></span>
-								<input class="span3" id="prependedInput" type="password" placeholder="Senha" name="usuario.senha">
+								<input class="span3" id="prependedInput" type="password" placeholder="Senha" name="usuario.senha" required>
 							</div>
 						</div>
 						<div class="control-group" style="padding-left:10px";>
@@ -42,7 +42,7 @@
 						<c:if test="${not empty error}">
 						<div class="alert alert-error">
 							<button class="close" data-dismiss="alert">&times;</button>
-							${error} 
+							${error}
 						</div>
 					</c:if>
 					<c:if test="${not empty success}">
