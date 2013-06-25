@@ -56,7 +56,10 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<c:url value="/img/usuario.png"/>"> ${userSession.user.nome} <b class="caret"></b></a>
 								<ul class="dropdown-menu">
+								<c:if test="${userSession.user.perfil == 'ADMIN'}">
 									<li><a href="#"><i class="icon-cog"></i> Configurações</a></li>
+								</c:if>
+									<li><a href="#"><i class="icon-cog"></i> Alterar senha</a></li>
 									<li class="divider"></li>
 									<li><a href="${pageContext.request.contextPath}/logout"><i class="icon-off"></i> Sair</a></li>
 								</ul>
