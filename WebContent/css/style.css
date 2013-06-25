@@ -4,6 +4,10 @@
 	margin-top: 7em;
 }
 
+[class^="icon-"] {
+	vertical-align: middle;
+}
+
 .form-signin {
 	max-width: 300px;
 	padding: 19px 29px 29px;

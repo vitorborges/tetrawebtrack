@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
+	<link href="<c:url value="/css/font-awesome.css"/>" rel="stylesheet">
 	<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link rel="shortcut icon" href="<c:url value="/img/logo.png"/>" />
 </head>
@@ -14,43 +15,39 @@
 	<header>
 		<%@ include file="/decorators/header.jsp" %>
 	</header>
-	
-	
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="span4">
 					<div class="hero-unit">
-						<h4>Chamados</h4>
-						<!-- <img src="<c:url value='/img/helpdesk.png' />" alt="" /> -->
-						<label>Pendentes <span class="badge badge-important pull-right">5</span></label>
-						<label>Resolvidos <span class="badge badge-success pull-right">7</span></label>
-						<label>Cancelados <span class="badge badge-important pull-right">2</span></label>
+						<h4><i class="icon-desktop"></i> Chamados</h4>
+						<label>Pendentes <span class="badge pull-right">5</span></label>
+						<label>Resolvidos <span class="badge pull-right">7</span></label>
+						<label>Cancelados <span class="badge pull-right">2</span></label>
 					</div>
 				</div>
 				<div class="span4">
 					<div class="hero-unit">
-						<h4>Base de conhecimento</h4>
-						<!-- <img src="<c:url value='/img/helpdesk.png' />" alt="" /> -->
-						<label>Em aprovação <span class="badge badge-info pull-right">4</span></label>
-						<label>Adicionadas recentemente<span class="badge badge-warning pull-right">3</span></label>
-						<label>Rejeitadas <span class="badge badge-info pull-right">0</span></label>
+						<h4><i class="icon-cloud"></i> KB</h4>
+						<label>Em aprovação <span class="badge pull-right">4</span></label>
+						<label>Adicionadas recentemente<span class="badge pull-right">3</span></label>
+						<label>Rejeitadas <span class="badge pull-right">0</span></label>
 					</div>
 				</div>
 				<div class="span4">
 					<div class="hero-unit">
-						<h4>Implantações</h4>
-						<!-- <img src="<c:url value='/img/helpdesk.png' />" alt="" /> -->
+						<h4><i class="icon-folder-open"></i> Implantações</h4>
 						<label>Em andamento <span class="badge pull-right">1</span></label>
-						<label>Agendadas <span class="badge badge-important pull-right">3</span></label>
-						<label>Concluidas <span class="badge badge-success pull-right">4</span></label>
+						<label>Agendadas <span class="badge pull-right">3</span></label>
+						<label>Concluidas <span class="badge pull-right">4</span></label>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>	
-	
+	</div>
 	<footer>
 		<%@ include file="/decorators/footer.jsp" %>
 	</footer>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
 </body>

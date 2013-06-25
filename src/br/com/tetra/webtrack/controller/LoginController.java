@@ -68,13 +68,13 @@ public class LoginController {
 	    		result.include("error", "E-mail não cadastrado.").redirectTo(this).login();
 	    	} else {
 	    	String senhaaux = Utils.gerasenha();
+	    	System.out.println("Senha: "+senhaaux+" MD5: "+Utils.md5(senhaaux));
 	    	
 	    	user.setSenha(Utils.md5(senhaaux));
 	    	
 	    	Email e = new Email();
-	    	senhaaux = e.enviar(email, "Recuperação de senha." ,"Sua senha foi recuperada. A sua senha é: " +
-	    	senhaaux + " . E-mail automático não responda.");
-	    	
+	    	senhaaux = e.enviar(email,"Recuperação de senha.","Uma nova senha foi gerada. A nova senha é: "+senhaaux);
+  	
 	    		if (senhaaux != null) {
 	    			usuariodao.gravar(user);
 	    			result.include("success", "E-mail enviado com sucesso!").redirectTo(this).login();

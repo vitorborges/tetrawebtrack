@@ -17,38 +17,23 @@ public class Email {
 	public Email() {
 		this.dao = new ConfigDAO();
 	}
-	
-	public String enviar(String email, String subject, String mensagen) throws EmailException, UnsupportedEncodingException {
-		
+
+	public String enviar(String email, String subject, String mensagem) throws EmailException, UnsupportedEncodingException {
 		try {
-			
 		Config config = dao.buscaConfig(1);
-		
-		
 		SimpleEmail e = new SimpleEmail();
-		   //Utilize o hostname do seu provedor de email
-		   System.out.println("alterando hostname...");
-		   e.setHostName(config.getEmailsmpt());
-		   //Quando a porta utilizada não é a padrão (gmail = 465)
+		   e.setHostName(config.getEmailsmtp());
 		   e.setSmtpPort(config.getEmailporta());
-		   //Adicione os destinatários
 		   e.addTo(email);
-		   //Configure o seu email do qual enviará
-		   e.setFrom(config.getEmaillogin(), "Tetra WebTrack E-mail Robot");
-		   //Adicione um assunto
+		   e.setFrom(config.getEmaillogin(), "Tetra WebTrack");
 		   e.setSubject(subject);
-		   //Adicione a mensagem do email
-		   e.setMsg(mensagen);
-		   //Para autenticar no servidor é necessário chamar os dois métodos abaixo
-		   System.out.println("autenticando...");
+		   e.setMsg(mensagem);
 		   e.setSSLCheckServerIdentity(true);
 		   e.setAuthentication(config.getEmaillogin(), config.getEmailsenha());
-		   System.out.println("enviando...");
 		   e.send();
 		} catch (EmailException e) {
-			return null;
+			e.getMessage();
 		}
-			return "sucesso";
+		return "sucesso";
 	}
-
 }

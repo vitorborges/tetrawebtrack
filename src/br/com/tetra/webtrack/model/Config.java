@@ -11,13 +11,12 @@ public class Config {
 	@Column(name="id_config")
 	private Long id;
 	@Column(length=35)
-	private String emailsmpt;
+	private String emailsmtp;
 	@Column(length=30)
 	private String emaillogin;
 	private Integer emailporta;
 	@Column(length = 32)
 	private String emailsenha;
-	
 	
 	// getters and setters
 	
@@ -27,11 +26,11 @@ public class Config {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getEmailsmpt() {
-		return emailsmpt;
+	public String getEmailsmtp() {
+		return emailsmtp;
 	}
-	public void setEmailsmpt(String emailsmpt) {
-		this.emailsmpt = emailsmpt;
+	public void setEmailsmpt(String emailsmtp) {
+		this.emailsmtp = emailsmtp;
 	}
 	public String getEmaillogin() {
 		return emaillogin;
@@ -51,7 +50,4 @@ public class Config {
 	public void setEmailsenha(String emailsenha) {
 		this.emailsenha = emailsenha;
 	}
-	
-	
-	
 }
