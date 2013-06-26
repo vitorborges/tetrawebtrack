@@ -45,6 +45,10 @@ public class Ticket {
 	@Lob
 	@Column(name="obs")
 	private String obs;
+	@Column(name="codaux1", length=25)
+	private String codaux1;
+	@Column(name="codaux2", length=25)
+	private String codaux2;
 	
 	//RELACIONAMENTOS
 	
