@@ -36,7 +36,7 @@ public class Atendimento {
 
 	// RELACIONAMENTOS
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_ticket", insertable = true, updatable = true)
 	@Fetch(FetchMode.JOIN)
 	private Ticket ticket;
@@ -44,6 +44,10 @@ public class Atendimento {
 	@JoinColumn(name = "id_usuario", insertable = true, updatable = true)
 	@Fetch(FetchMode.JOIN)
 	private Usuario usuario;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_equipamento", insertable = true, updatable = true)
+	@Fetch(FetchMode.JOIN)
+	private Equipamento equipamento;
 
 	// getters and setters
 
@@ -118,5 +122,14 @@ public class Atendimento {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+
+	public Equipamento getEquipamento() {
+		return equipamento;
+	}
+
+	public void setEquipamento(Equipamento equipamento) {
+		this.equipamento = equipamento;
+	}
+	
 
 }
