@@ -5,9 +5,7 @@
 <div class="well sidebar-nav">
 	<ul class="nav nav-list">
 		<li class="nav-header">Menu</li>
-		<li class="active"><a href="#">Link</a></li>
-		<li><a href="#">Link</a></li>
-		<li><a href="#">Link</a></li>
-		<li><a href="#">Link</a></li>
+		<li><a href="${pageContext.request.contextPath}/suporte/tickets">Remoto</a></li>
+		<li><a href="${pageContext.request.contextPath}/suporte/tickets/presencial">Presencial</a></li>
 	</ul>
 </div>

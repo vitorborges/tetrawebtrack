@@ -47,7 +47,7 @@ public class Cliente {
 	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY)
 	private Collection<Ticket> tickets;
 	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY)
-	private Collection<Equipamento> equipamentos;
+	// private Collection<Equipamento> equipamentos;
 	
 	
 	
@@ -137,11 +137,11 @@ public class Cliente {
 	public void setInativo(Boolean inativo) {
 		this.inativo = inativo;
 	}
-	public Collection<Equipamento> getEquipamentos() {
-		return equipamentos;
-	}
-	public void setEquipamentos(Collection<Equipamento> equipamentos) {
-		this.equipamentos = equipamentos;
-	}
+	// public Collection<Equipamento> getEquipamentos() {
+	// 	return equipamentos;
+	// }
+	// public void setEquipamentos(Collection<Equipamento> equipamentos) {
+	// 	this.equipamentos = equipamentos;
+	// }
 	
 }

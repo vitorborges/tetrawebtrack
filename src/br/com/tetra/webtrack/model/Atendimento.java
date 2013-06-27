@@ -47,7 +47,7 @@ public class Atendimento {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_equipamento", insertable = true, updatable = true)
 	@Fetch(FetchMode.JOIN)
-	private Equipamento equipamento;
+	// private Equipamento equipamento;
 
 	// getters and setters
 
@@ -123,13 +123,13 @@ public class Atendimento {
 		this.usuario = usuario;
 	}
 
-	public Equipamento getEquipamento() {
-		return equipamento;
-	}
+	// public Equipamento getEquipamento() {
+	// 	return equipamento;
+	// }
 
-	public void setEquipamento(Equipamento equipamento) {
-		this.equipamento = equipamento;
-	}
+	// public void setEquipamento(Equipamento equipamento) {
+	// 	this.equipamento = equipamento;
+	// }
 	
 
 }

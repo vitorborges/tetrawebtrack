@@ -43,7 +43,7 @@ public class Usuario implements Serializable{
 		@OneToMany(mappedBy="usuario", fetch=FetchType.LAZY)
 		private Collection<Ticket> tickets;
 		@OneToMany(mappedBy="usuario", fetch=FetchType.LAZY)
-		private Collection<Equipamento> equipamentos;
+		// private Collection<Equipamento> equipamentos;
 		
 		// getters and setters		
 		
@@ -111,11 +111,11 @@ public class Usuario implements Serializable{
 		public static long getSerialversionuid() {
 			return serialVersionUID;
 		}
-		public Collection<Equipamento> getEquipamentos() {
-			return equipamentos;
-		}
-		public void setEquipamentos(Collection<Equipamento> equipamentos) {
-			this.equipamentos = equipamentos;
-		}
+		// public Collection<Equipamento> getEquipamentos() {
+		// 	return equipamentos;
+		// }
+		// public void setEquipamentos(Collection<Equipamento> equipamentos) {
+		// 	this.equipamentos = equipamentos;
+		// }
 		
 }

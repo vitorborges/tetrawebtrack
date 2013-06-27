@@ -20,7 +20,7 @@ public class SuporteController {
 		
 	}
     
-    @Get("/suporte/presencial")
+    @Get("/suporte/tickets/presencial")
     public void presencial() {
     	
     }

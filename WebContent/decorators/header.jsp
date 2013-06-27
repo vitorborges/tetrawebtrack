@@ -2,7 +2,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -16,11 +16,6 @@
 					<li>
 						<a href="${pageContext.request.contextPath}/suporte/tickets">
 							<i class="icon-desktop"></i> <span>Chamados</span>
-						</a>
-					</li>
-					<li>
-						<a href="${pageContext.request.contextPath}/suporte/presencial">
-							<i class="icon-male"></i> <span>Presencial</span>
 						</a>
 					</li>
 					<li>

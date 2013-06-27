@@ -6,12 +6,11 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<link href="<c:url value="/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
-	<link href="<c:url value="/css/style.css"/>" rel="stylesheet"	type="text/css" media="screen" />
+	<link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<c:url value="/css/font-awesome.css"/>" rel="stylesheet">
+	<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link rel="shortcut icon" href="<c:url value="/img/logo.png"/>" />
-	<title>Tetra WebTrack</title>
 </head>
 <body>
 	<header>
@@ -30,7 +29,6 @@
 								<th>#</th>
 								<th>Cliente</th>
 								<th>Descrição</th>
-								<th>Solução</th>
 								<th>Abertura</th>
 								<th>Término</th>
 								<th>Estado</th>
@@ -39,97 +37,123 @@
 							</tr>
 						</thead>
 						<tbody>
-							<!-- <tr>
+							<tr>
 								<td>1</td>
 								<td>Ipiranga HC</td>
-								<td>Balcão não funciona</td>
-								<td>Servidor reiniciado</td>
+								<td>Máquina de expedição não liga</td>
 								<td>25/06/2013 13:20</td>
-								<td>25/06/2013 13:40</td>
-								<td>Resolvido</td>
-								<th>Matheus</th>
+								<td></td>
+								<td>Pendente</td>
+								<td></td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>Emprecom Guarus</td>
-								<td>Sistema desatualizado</td>
+								<td>Emprecom Formosa</td>
+								<td>Instalar impressora nova</td>
+								<td>25/06/2013 14:10</td>
+								<td>25/06/2013 14:46</td>
+								<td>Resolvido</td>
+								<th>Júnior</th>
 								<td></td>
-								<td>25/06/2013 14:00</td>
-								<td></td>
-								<td>Pendente</td>
-								<th>Jocinardo</th>
 							</tr>
 							<tr>
 								<td>3</td>
 								<td>Depósito do Kleber</td>
-								<td>Caixa 1 não exportou</td>
-								<td>Caixa exportado</td>
+								<td>Formatar servidor</td>
 								<td>25/06/2013 13:43</td>
 								<td>25/06/2013 13:47</td>
 								<td>Resolvido</td>
-								<th>Robson</th>
+								<td>Robson</td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>4</td>
 								<td>Casa das Tintas</td>
-								<td>Não consegue reemitir nota fiscal</td>
-								<td>Download de xml e reimpressão pelo UNIDANFE</td>
+								<td>Instalar certificado digital</td>
 								<td>25/06/2013 15:10</td>
 								<td>25/06/2013 15:25</td>
 								<td>Resolvido</td>
-								<th>Matheus</th>
+								<td>Braz</td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>5</td>
 								<td>Supermercado Econômico</td>
-								<td>Busca preço não funciona</td>
-								<td>Sistema reiniciado</td>
+								<td>Configurar balança</td>
 								<td>25/06/2013 15:28</td>
 								<td>25/06/2013 15:34</td>
 								<td>Resolvido</td>
-								<th>Lucas</th>
+								<td>Renato</td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>6</td>
 								<td>Irmãos Pessanha</td>
-								<td>Cancelamento de nota fiscal</td>
-								<td></td>
+								<td>Backup dos dados</td>
 								<td>25/06/2013 16:00</td>
+								<td>25/06/2013 17:20</td>
+								<td>Resolvido</td>
+								<td>Renato</td>
 								<td></td>
-								<td>Pendente</td>
-								<th>Matheus</th>
 							</tr>
 							<tr>
 								<td>7</td>
 								<td>Meca</td>
-								<td>Nota sendo emitida pela filial errada</td>
-								<td>Sistema configurado corretamente</td>
-								<td>25/06/2013 16:15</td>
-								<td>25/06/2013 17:00</td>
+								<td>Migração do sistema</td>
+								<td>25/06/2013 13:15</td>
+								<td>25/06/2013 19:32</td>
 								<td>Resolvido</td>
-								<th>Victor</th>
+								<td>Thiago</td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>8</td>
 								<td>Demaco</td>
-								<td>DAV saindo cortado</td>
-								<td>Configurada impressora no padrão A5</td>
+								<td>Instalar impressora de etiqueta</td>
 								<td>25/06/2013 17:03</td>
-								<td>25/06/2013 17:10</td>
+								<td>25/06/2013 18:20</td>
 								<td>Resolvido</td>
-								<th>Carlos</th>
+								<td>Braz</td>
+								<td></td>
 							</tr>
 							<tr>
 								<td>9</td>
 								<td>Rei do Queijo</td>
-								<td>Erro no balanço</td>
-								<td></td>
+								<td>Instalar placa multi-serial</td>
 								<td>25/06/2013 17:03</td>
 								<td></td>
 								<td>Pendente</td>
-								<th>Marcus</th>
-							</tr> -->
+								<td>Alcides</td>
+								<td></td>
+							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -140,19 +164,7 @@
 	</footer>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="<c:url value="/js/jquery.dataTables.columnFilter.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
-	<script>
-	$(document).ready(function() {
-		oTable = $('#tabela').dataTable({
-			"bPaginate": false,
-			"bJQueryUI": false,
-			"oLanguage": {
-				"sInfo": "Exibindo registros de _START_ a _END_ de um total de _TOTAL_",
-				"sInfoEmpty": "Nenhum registro para exibir",
-				"sSearch" : "",
-				"sInfoFiltered" : ""
-			}
-		});
-	});
-	</script>
+	<script type="text/javascript" src="<c:url value="/js/application.js"/>"></script>
 </body>

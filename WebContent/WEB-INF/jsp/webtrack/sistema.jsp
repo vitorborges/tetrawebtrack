@@ -21,7 +21,7 @@
 			<div class="row">
 				<div class="span4">
 					<div class="hero-unit">
-						<h4><i class="icon-desktop"></i> Chamados</h4>
+						<h3><i class="icon-desktop icon-2x opacity"></i> Chamados</h3>
 						<label>Pendentes <span class="badge pull-right">5</span></label>
 						<label>Resolvidos <span class="badge pull-right">7</span></label>
 						<label>Cancelados <span class="badge pull-right">2</span></label>
@@ -29,7 +29,7 @@
 				</div>
 				<div class="span4">
 					<div class="hero-unit">
-						<h4><i class="icon-cloud"></i> KB</h4>
+						<h3><i class="icon-cloud icon-2x opacity"></i> KB</h3>
 						<label>Em aprovação <span class="badge pull-right">4</span></label>
 						<label>Adicionadas recentemente<span class="badge pull-right">3</span></label>
 						<label>Rejeitadas <span class="badge pull-right">0</span></label>
@@ -37,7 +37,7 @@
 				</div>
 				<div class="span4">
 					<div class="hero-unit">
-						<h4><i class="icon-folder-open"></i> Implantações</h4>
+						<h3><i class="icon-folder-open icon-2x opacity"></i> Implantações</h3>
 						<label>Em andamento <span class="badge pull-right">1</span></label>
 						<label>Agendadas <span class="badge pull-right">3</span></label>
 						<label>Concluidas <span class="badge pull-right">4</span></label>

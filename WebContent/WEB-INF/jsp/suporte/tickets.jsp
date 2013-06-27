@@ -6,12 +6,11 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<link href="<c:url value="/css/bootstrap.min.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet" type="text/css" media="screen" />
-	<link href="<c:url value="/css/style.css"/>" rel="stylesheet"	type="text/css" media="screen" />
+	<link href="<c:url value="/css/bootstrap-responsive.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<c:url value="/css/font-awesome.css"/>" rel="stylesheet">
+	<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link rel="shortcut icon" href="<c:url value="/img/logo.png"/>" />
-	<title>Tetra WebTrack</title>
 </head>
 <body>
 	<header>
@@ -106,7 +105,7 @@
 								<td>25/06/2013 16:15</td>
 								<td>25/06/2013 17:00</td>
 								<td>Resolvido</td>
-								<th>Victor</th>
+								<th>Vitor</th>
 							</tr>
 							<tr>
 								<td>8</td>
@@ -129,6 +128,32 @@
 								<th>Marcus</th>
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+								<th>
+									<select></select>
+								</th>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -139,19 +164,7 @@
 	</footer>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="<c:url value="/js/jquery.dataTables.columnFilter.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
-	<script>
-	$(document).ready(function() {
-		oTable = $('#tabela').dataTable({
-			"bPaginate": false,
-			"bJQueryUI": false,
-			"oLanguage": {
-				"sInfo": "Exibindo registros de _START_ a _END_ de um total de _TOTAL_",
-				"sInfoEmpty": "Nenhum registro para exibir",
-				"sSearch" : "",
-				"sInfoFiltered" : ""
-			}
-		});
-	});
-	</script>
+	<script type="text/javascript" src="<c:url value="/js/application.js"/>"></script>
 </body>
