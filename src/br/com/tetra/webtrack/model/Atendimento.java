@@ -47,7 +47,7 @@ public class Atendimento {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_equipamento", insertable = true, updatable = true)
 	@Fetch(FetchMode.JOIN)
-	// private Equipamento equipamento;
+	private Equipamento equipamento;
 
 	// getters and setters
 
