@@ -19,10 +19,10 @@
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="span2">
+				<!-- <div class="span2">
 					<%@ include file="/decorators/sidebar.jsp" %>
-				</div>
-				<div class="span10">
+				</div> -->
+				<div class="span12">
 					<table class="table table-bordered table-striped" id="tabela">
 						<thead>
 							<tr class="info">
