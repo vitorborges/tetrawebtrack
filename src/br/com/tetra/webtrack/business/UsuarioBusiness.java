@@ -20,7 +20,7 @@ public class UsuarioBusiness {
 		try {
 			EntityTransaction transaction = manager.getTransaction();
 			transaction.begin();
-			manager.persist(usuario);
+			manager.merge(usuario);
 			transaction.commit();
 			manager.close();
 		} catch (Exception ex) {
@@ -31,5 +31,7 @@ public class UsuarioBusiness {
 	public void listagemUsuario(){
 		
 	}
+
+
 	
 }

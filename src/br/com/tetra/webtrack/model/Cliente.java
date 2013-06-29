@@ -47,7 +47,7 @@ public class Cliente {
 	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY)
 	private Collection<Ticket> tickets;
 	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY)
-	// private Collection<Equipamento> equipamentos;
+	private Collection<Equipamento> equipamentos;
 	
 	
 	

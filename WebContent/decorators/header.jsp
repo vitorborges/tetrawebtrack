@@ -52,7 +52,7 @@
 							<c:if test="${userSession.user.perfil == 'ADMIN'}">
 							<li><a href="#"><i class="icon-gear"></i> Configurações</a></li>
 						</c:if>
-						<li><a href="#"><i class="icon-lock"></i> Alterar senha</a></li>
+						<li><a href="#myModal"  role="button" data-toggle="modal"><i class="icon-lock"></i> Alterar senha</a></li>
 						<li class="divider"></li>
 						<li><a href="${pageContext.request.contextPath}/logout"><i class="icon-off"></i> Sair</a></li>
 					</ul>
@@ -63,4 +63,30 @@
 			</form>
 		</div>
 	</div>
+</div>
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Alterar Senha</h3>
+	</div>
+	<div class="modal-body">
+		<form class="form-inline" action="${pageContext.request.contextPath}/alterarsenha" method="get">
+			<div class="input-prepend">
+				<div class="control-group">
+				<input class="span4" id="prependedInput" type="password" placeholder="Senha atual" name="senhaatual">
+				</div>
+				<div class="control-group">
+				<input class="span4" id="prependedInput" type="password" placeholder="Nova senha" name="senhanova">
+				</div>
+				<div class="control-group">
+				<input class="span4" id="prependedInput" type="password" placeholder="Confirme nova senha" name="confirmasenha">
+				</div>
+			</div>
+			<div class="control-group">
+			<button type="submit" class="btn btn-info">alterar</button>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer"></div>
 </div>

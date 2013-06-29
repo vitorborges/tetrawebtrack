@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -50,9 +49,9 @@
 							</div>
 							<div class="control-group">
 								<label class="control-label required"
-									for="form_cadastro_medico:crm">DescriÃ§Ã£o: </label>
+									for="form_cadastro_medico:crm">Descrição: </label>
 								<div class="controls">
-									<input type="text" name="grupo.descricao" placeholder="DescriÃ§Ã£o" >
+									<input type="text" name="grupo.descricao" placeholder="Descrição" >
 	
 								</div>
 							</div>
