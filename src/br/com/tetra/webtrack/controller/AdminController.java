@@ -1,5 +1,6 @@
 package br.com.tetra.webtrack.controller;
 
+import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.session.UserSession;
@@ -15,6 +16,7 @@ public class AdminController {
         this.userSession = userSession;
     }
     
+    @Path("/homeadmin")
     public void homeadmin(){
     	
     }

@@ -28,29 +28,28 @@
 							<i class="icon-check"></i> <span>Implantações</span>
 						</a>
 					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="icon-folder-open"></i> <span>Cadastros</span>
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="<c:url value="/cliente/cadastro"/>"><i class="icon-plus"></i> Cliente</a>
-							</li>
-							<li>
-								<a href="<c:url value="/grupo/cadastro"/>"><i class="icon-adjust"></i> Grupo</a>
-							</li>
-							<li>
-								<a href="#"><i class="icon-user"></i> Usuário</a>
-							</li>
-						</ul>
-					</li>
+					<c:if test="${(userSession.user.perfil != 'CLIENTE' && userSession.user.perfil != 'TECNICO')}">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-folder-open"></i> <span>Cadastros</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="<c:url value="/cliente/listacliente"/>"><i class="icon-plus"></i> Cliente</a>
+								</li>
+								<li>
+									<a href="<c:url value="/grupo/listagrupo"/>"><i class="icon-adjust"></i> Grupo</a>
+								</li>
+							</ul>
+						</li>
+					</c:if>
 				</ul>
 				<ul class="nav pull-right">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> ${userSession.user.nome} <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<c:if test="${userSession.user.perfil == 'ADMIN'}">
-							<li><a href="#"><i class="icon-gear"></i> Configurações</a></li>
+							<li><a href="${pageContext.request.contextPath}/homeadmin"><i class="icon-gear"></i> Configurações</a></li>
 						</c:if>
 						<li><a href="#myModal"  role="button" data-toggle="modal"><i class="icon-lock"></i> Alterar senha</a></li>
 						<li class="divider"></li>

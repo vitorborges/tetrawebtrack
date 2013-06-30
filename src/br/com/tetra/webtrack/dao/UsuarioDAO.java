@@ -1,5 +1,7 @@
 package br.com.tetra.webtrack.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
@@ -40,5 +42,11 @@ public class UsuarioDAO {
         } catch (NoResultException e) {
             return null;
         }
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Usuario> listar() {
+		Query query = manager.createQuery(" from Usuario");
+		return query.getResultList();
 	}
 }
