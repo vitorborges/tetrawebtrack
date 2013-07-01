@@ -16,10 +16,10 @@ public class LoginBusiness {
         this.manager = manager;
     }
 
-    public Usuario autenticar(String email, String senha) {
+    public Usuario autenticar(String login, String senha) {
     	try {
-            Query query = manager.createQuery("from Usuario where email = :email and senha = md5(:senha)");
-            query.setParameter("email", email);
+            Query query = manager.createQuery("from Usuario where login = :login and senha = md5(:senha)");
+            query.setParameter("login", login);
             query.setParameter("senha", senha);
             return (Usuario) query.getSingleResult();
         } catch (NoResultException e) {

@@ -22,7 +22,7 @@
 							<label>Usuário:</label>
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-user"></i></span>
-								<input class="span3" id="prependedInput" type="text" placeholder="Usuário" name="usuario.email" required>
+								<input class="span3" id="prependedInput" type="text" placeholder="Usuário" name="usuario.login" required>
 							</div>
 						</div>
 						<div class="control-group">
