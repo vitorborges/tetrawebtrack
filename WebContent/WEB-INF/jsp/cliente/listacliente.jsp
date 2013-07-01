@@ -28,7 +28,7 @@
 		</div>	
 		<div class="row">
 			<div class="span11 offset1">
-				<table class="table table-condensed">
+				<table class="table table-condensed table-hover">
 					<tr>
 						<td><strong>#Id</strong></td>
 						<td><strong>Fantasia</strong></td>
@@ -44,16 +44,18 @@
 					</tr>
 					<c:forEach var="cliente" items="${clienteList}">
 					<tr>
-						<td>${cliente.id}</td>
-						<td>${cliente.fantasia}</td>
-						<td>${cliente.razaosocial}</td>
-						<td>${cliente.cnpj}</td>
-						<td>${cliente.fone1} | ${cliente.fone2}</td>
-						<td>${cliente.email}</td>
-						<td>${cliente.endereco}, ${cliente.numero}</td>
-						<td>${cliente.bairro}</td>
-						<td>${cliente.cidade}</td>
-						<td>${cliente.responsavel}</td>
+						
+							<td><a href="${pageContext.request.contextPath }/cliente/cliente/${cliente.id}">${cliente.id}</a></td>
+							<td>${cliente.fantasia}</td>
+							<td>${cliente.razaosocial}</td>
+							<td>${cliente.cnpj}</td>
+							<td>${cliente.fone1} | ${cliente.fone2}</td>
+							<td>${cliente.email}</td>
+							<td>${cliente.endereco}, ${cliente.numero}</td>
+							<td>${cliente.bairro}</td>
+							<td>${cliente.cidade}</td>
+							<td>${cliente.responsavel}</td>
+						
 							<td>
 								<c:if test="${(usuario.perfil != 'CLIENTE' && usuario.perfil != 'TECNICO')}"><a href="${pageContext.request.contextPath }/cliente/editar/${cliente.id}"><img	src="<c:url value='/img/icones/pencil-16.png'/>" /></a></c:if>
 								<c:if test="${cliente.inativo }"><img src="<c:url value='/img/icones/badge-square-cross-16.png'/>"></c:if>

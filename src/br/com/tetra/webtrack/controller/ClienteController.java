@@ -44,5 +44,10 @@ public class ClienteController {
 	public void edita(Cliente cliente){
 			dao.gravar(cliente);
 			result.redirectTo(this).listacliente();
-		}
+	}
+	
+	@Get("/cliente/cliente/{cliente.id}")
+	public void cliente(Cliente cliente){
+		result.include("cliente", dao.buscar(cliente.getId()));
+	}
 }
