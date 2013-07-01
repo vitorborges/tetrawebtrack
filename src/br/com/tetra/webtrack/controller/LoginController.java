@@ -36,8 +36,8 @@ public class LoginController {
 	    @Public
 	    @Post("/autenticar")
 	    public void autenticar(Usuario usuario) {
-	    	Usuario user = business.autenticar(usuario.getEmail(), usuario.getSenha());
-	    	if (usuario.getEmail() == "") {
+	    	Usuario user = business.autenticar(usuario.getLogin(), usuario.getSenha());
+	    	if (usuario.getLogin() == "") {
 	    		result.include("error", "Favor informar o campo Usuário").redirectTo(this).login();
 	    		return;
 	    	}
@@ -50,7 +50,7 @@ public class LoginController {
 	            result.redirectTo(WebtrackController.class).sistema();
 	        }
 	    	else {
-	            result.include("error", "E-mail ou senha incorreta!").redirectTo(this).login();
+	            result.include("error", "Usuário ou senha incorretos!").redirectTo(this).login();
 	    	}
 	    }
 

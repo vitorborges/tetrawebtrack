@@ -19,13 +19,14 @@
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="span2">
+				<!-- <div class="span2">
 					<%@ include file="/decorators/sidebar.jsp" %>
-				</div>
-				<div class="span10">
-					<table class="table table-bordered table-striped" id="tabela">
+				</div> -->
+				<div class="span12">
+					<table class="table table-bordered table-striped table-condensed" id="tabela">
 						<thead>
-							<tr class="info">
+							<tr>
+								<th></th>
 								<th>#</th>
 								<th>Cliente</th>
 								<th>Descrição</th>
@@ -38,6 +39,7 @@
 						</thead>
 						<tbody>
 							<tr>
+								<td><input type="checkbox"></td>
 								<td>1</td>
 								<td>Ipiranga HC</td>
 								<td>Balcão não funciona</td>
@@ -48,6 +50,7 @@
 								<th>Matheus</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>2</td>
 								<td>Emprecom Guarus</td>
 								<td>Sistema desatualizado</td>
@@ -58,6 +61,7 @@
 								<th>Jocinardo</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>3</td>
 								<td>Depósito do Kleber</td>
 								<td>Caixa 1 não exportou</td>
@@ -68,6 +72,7 @@
 								<th>Robson</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>4</td>
 								<td>Casa das Tintas</td>
 								<td>Não consegue reemitir nota fiscal</td>
@@ -78,6 +83,7 @@
 								<th>Matheus</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>5</td>
 								<td>Supermercado Econômico</td>
 								<td>Busca preço não funciona</td>
@@ -88,6 +94,7 @@
 								<th>Lucas</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>6</td>
 								<td>Irmãos Pessanha</td>
 								<td>Cancelamento de nota fiscal</td>
@@ -98,6 +105,7 @@
 								<th>Matheus</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>7</td>
 								<td>Meca</td>
 								<td>Nota sendo emitida pela filial errada</td>
@@ -108,6 +116,7 @@
 								<th>Vitor</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>8</td>
 								<td>Demaco</td>
 								<td>DAV saindo cortado</td>
@@ -118,6 +127,7 @@
 								<th>Carlos</th>
 							</tr>
 							<tr>
+								<td><input type="checkbox" /></td>
 								<td>9</td>
 								<td>Rei do Queijo</td>
 								<td>Erro no balanço</td>
@@ -128,32 +138,6 @@
 								<th>Marcus</th>
 							</tr>
 						</tbody>
-						<tfoot>
-							<tr>
-								<th></th>
-								<th>
-									<select></select>
-								</th>
-								<th>
-									<select></select>
-								</th>
-								<th>
-									<select></select>
-								</th>
-								<th>
-									<select></select>
-								</th>
-								<th>
-									<select></select>
-								</th>
-								<th>
-									<select></select>
-								</th>
-								<th>
-									<select></select>
-								</th>
-							</tr>
-						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -162,9 +146,10 @@
 	<footer>
 		<%@ include file="/decorators/footer.jsp" %>
 	</footer>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
 	<script type="text/javascript" src="<c:url value="/js/jquery.dataTables.columnFilter.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/js/application.js"/>"></script>
 </body>
+</html>

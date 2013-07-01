@@ -1,146 +1,107 @@
-<<<<<<< HEAD
-$(document).ready(function() {
-	$('#tabela').dataTable({
-		"sDom": 'ftp',
-		"aoColumnDefs": [
-		{
-		    aTargets: [0],
-		    fnRender: function (o, v) {
-		        return '<input type="checkbox" id="someCheckbox" name="someCheckbox" />';
-		    },
-		    // sClass: 'tableCell'
-		}]
-		"oLanguage": {
-			"sProcessing":   "A processar...",
-			"sLengthMenu":   "Mostrar _MENU_ registros",
-			"sZeroRecords":  "Não foram encontrados resultados",
-			"sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registos",
-			"sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
-			"sInfoFiltered": "(filtrado de _MAX_ registos no total)",
-			"sInfoPostFix":  "",
-			"sSearch":       "",
-			"sUrl":          "",
-			"oPaginate": {
-				"sFirst":    "Primeiro",
-				"sPrevious": "Anterior",
-				"sNext":     "Seguinte",
-				"sLast":     "Último"
-			}
-		}
-	})
-	.columnFilter({
-		aoColumns: [
-		null,
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		]
-	});
-=======
-$.fn.dataTableExt.oPagination.iTweenTime = 50;
-
-$.fn.dataTableExt.oPagination.scrolling = {
-	"fnInit": function ( oSettings, nPaging, fnCallbackDraw )
-	{
-		var nPrevious = document.createElement( 'div' );
-		var nNext = document.createElement( 'div' );
-		if ( oSettings.sTableId !== '' )
-		{
-			nPaging.setAttribute( 'id', oSettings.sTableId+'_paginate' );
-			nPrevious.setAttribute( 'id', oSettings.sTableId+'_previous' );
-			nNext.setAttribute( 'id', oSettings.sTableId+'_next' );
-		}
-		nPrevious.className = "paginate_disabled_previous";
-		nNext.className = "paginate_disabled_next";
-		nPrevious.title = oSettings.oLanguage.oPaginate.sPrevious;
-		nNext.title = oSettings.oLanguage.oPaginate.sNext;
-		nPaging.appendChild( nPrevious );
-		nPaging.appendChild( nNext );
-		$(nPrevious).click( function() {
-			if ( typeof oSettings.iPagingLoopStart != 'undefined' && oSettings.iPagingLoopStart != -1 )
-			{
-				return;
-			}
-			oSettings.iPagingLoopStart = oSettings._iDisplayStart;
-			oSettings.iPagingEnd = oSettings._iDisplayStart - oSettings._iDisplayLength;
-			if ( oSettings.iPagingEnd < 0 )
-			{
-			  oSettings.iPagingEnd = 0;
-			}
-			var iTween = $.fn.dataTableExt.oPagination.iTweenTime;
-			var innerLoop = function () {
-				if ( oSettings.iPagingLoopStart > oSettings.iPagingEnd ) {
-					oSettings.iPagingLoopStart--;
-					oSettings._iDisplayStart = oSettings.iPagingLoopStart;
-					fnCallbackDraw( oSettings );
-					setTimeout( function() { innerLoop(); }, iTween );
-				} else {
-					oSettings.iPagingLoopStart = -1;
-				}
-			};
-			innerLoop();
-		} );
-		$(nNext).click( function() {
-			if ( typeof oSettings.iPagingLoopStart != 'undefined' && oSettings.iPagingLoopStart != -1 )
-			{
-				return;
-			}
-			oSettings.iPagingLoopStart = oSettings._iDisplayStart;
-			if ( oSettings._iDisplayStart + oSettings._iDisplayLength < oSettings.fnRecordsDisplay() )
-			{
-				oSettings.iPagingEnd = oSettings._iDisplayStart + oSettings._iDisplayLength;
-			}
-			var iTween = $.fn.dataTableExt.oPagination.iTweenTime;
-			var innerLoop = function () {
-				if ( oSettings.iPagingLoopStart < oSettings.iPagingEnd ) {
-					oSettings.iPagingLoopStart++;
-					oSettings._iDisplayStart = oSettings.iPagingLoopStart;
-					fnCallbackDraw( oSettings );
-					setTimeout( function() { innerLoop(); }, iTween );
-				} else {
-					oSettings.iPagingLoopStart = -1;
-				}
-			};
-			innerLoop();
-		} );
-		$(nPrevious).bind( 'selectstart', function () { return false; } );
-		$(nNext).bind( 'selectstart', function () { return false; } );
-	},
-	"fnUpdate": function ( oSettings, fnCallbackDraw )
-	{
-		if ( !oSettings.aanFeatures.p )
-		{
-			return;
-		}
-		var an = oSettings.aanFeatures.p;
-		for ( var i=0, iLen=an.length ; i<iLen ; i++ )
-		{
-			if ( an[i].childNodes.length !== 0 )
-			{
-				an[i].childNodes[0].className =
-					( oSettings._iDisplayStart === 0 ) ?
-					oSettings.oClasses.sPagePrevDisabled : oSettings.oClasses.sPagePrevEnabled;
-				an[i].childNodes[1].className =
-					( oSettings.fnDisplayEnd() == oSettings.fnRecordsDisplay() ) ?
-					oSettings.oClasses.sPageNextDisabled : oSettings.oClasses.sPageNextEnabled;
-			}
-		}
-	}
+/* API method to get paging information */
+$.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
+{
+    return {
+        "iStart":         oSettings._iDisplayStart,
+        "iEnd":           oSettings.fnDisplayEnd(),
+        "iLength":        oSettings._iDisplayLength,
+        "iTotal":         oSettings.fnRecordsTotal(),
+        "iFilteredTotal": oSettings.fnRecordsDisplay(),
+        "iPage":          oSettings._iDisplayLength === -1 ?
+            0 : Math.ceil( oSettings._iDisplayStart / oSettings._iDisplayLength ),
+        "iTotalPages":    oSettings._iDisplayLength === -1 ?
+            0 : Math.ceil( oSettings.fnRecordsDisplay() / oSettings._iDisplayLength )
+    };
 }
+ 
+/* Bootstrap style pagination control */
+$.extend( $.fn.dataTableExt.oPagination, {
+    "bootstrap": {
+        "fnInit": function( oSettings, nPaging, fnDraw ) {
+            var oLang = oSettings.oLanguage.oPaginate;
+            var fnClickHandler = function ( e ) {
+                e.preventDefault();
+                if ( oSettings.oApi._fnPageChange(oSettings, e.data.action) ) {
+                    fnDraw( oSettings );
+                }
+            };
+ 
+            $(nPaging).addClass('pagination').append(
+                '<ul>'+
+                    '<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
+                    '<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
+                '</ul>'
+            );
+            var els = $('a', nPaging);
+            $(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
+            $(els[1]).bind( 'click.DT', { action: "next" }, fnClickHandler );
+        },
+ 
+        "fnUpdate": function ( oSettings, fnDraw ) {
+            var iListLength = 5;
+            var oPaging = oSettings.oInstance.fnPagingInfo();
+            var an = oSettings.aanFeatures.p;
+            var i, j, sClass, iStart, iEnd, iHalf=Math.floor(iListLength/2);
+ 
+            if ( oPaging.iTotalPages < iListLength) {
+                iStart = 1;
+                iEnd = oPaging.iTotalPages;
+            }
+            else if ( oPaging.iPage <= iHalf ) {
+                iStart = 1;
+                iEnd = iListLength;
+            } else if ( oPaging.iPage >= (oPaging.iTotalPages-iHalf) ) {
+                iStart = oPaging.iTotalPages - iListLength + 1;
+                iEnd = oPaging.iTotalPages;
+            } else {
+                iStart = oPaging.iPage - iHalf + 1;
+                iEnd = iStart + iListLength - 1;
+            }
+ 
+            for ( i=0, iLen=an.length ; i<iLen ; i++ ) {
+                // Remove the middle elements
+                $('li:gt(0)', an[i]).filter(':not(:last)').remove();
+ 
+                // Add the new list items and their event handlers
+                for ( j=iStart ; j<=iEnd ; j++ ) {
+                    sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
+                    $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+                        .insertBefore( $('li:last', an[i])[0] )
+                        .bind('click', function (e) {
+                            e.preventDefault();
+                            oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
+                            fnDraw( oSettings );
+                        } );
+                }
+ 
+                // Add / remove disabled classes from the static elements
+                if ( oPaging.iPage === 0 ) {
+                    $('li:first', an[i]).addClass('disabled');
+                } else {
+                    $('li:first', an[i]).removeClass('disabled');
+                }
+ 
+                if ( oPaging.iPage === oPaging.iTotalPages-1 || oPaging.iTotalPages === 0 ) {
+                    $('li:last', an[i]).addClass('disabled');
+                } else {
+                    $('li:last', an[i]).removeClass('disabled');
+                }
+            }
+        }
+    }
+} );
 
 $(document).ready(function() {
 	$('#tabela').dataTable({
-		"sPaginationType": "scrolling",
+		"sDom": '<ft><iplr>',
+		"aLengthMenu": [[5, 10, 15, -1], [5, 10, 15, "Todos"]],
+		"sPaginationType": "bootstrap",
 		"oLanguage": {
 			"sProcessing":   "A processar...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
 			"sZeroRecords":  "Não foram encontrados resultados",
-			"sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registos",
-			"sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
+			"sInfo":         "Mostrando de _START_ até _END_ (Total: _TOTAL_ registos)",
+			"sInfoEmpty":    "Mostrando de 0 até 0 (Total: 0 registros)",
 			"sInfoFiltered": "(filtrado de _MAX_ registos no total)",
 			"sInfoPostFix":  "",
 			"sSearch":       "",
@@ -148,22 +109,9 @@ $(document).ready(function() {
 			"oPaginate": {
 				"sFirst":    "Primeiro",
 				"sPrevious": "Anterior",
-				"sNext":     "   Seguinte",
+				"sNext":     "     Seguinte",
 				"sLast":     "Último"
 			}
 		}
 	})
-	.columnFilter({
-		aoColumns: [
-		null,
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		{ type: "select" },
-		]
-	});
->>>>>>> 9419e8ab657b45146756ace57d9b70a8bcb47df6
 });

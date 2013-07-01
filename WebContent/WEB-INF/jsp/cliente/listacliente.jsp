@@ -11,7 +11,6 @@
 	<link href="<c:url value="/css/font-awesome.css"/>" rel="stylesheet">
 	<link href="<c:url value="/css/style.css"/>" rel="stylesheet" type="text/css" media="screen" />
 	<link rel="shortcut icon" href="<c:url value="/img/logo.png"/>" />
-
 </head>
 <body>
 	<header>
@@ -70,6 +69,7 @@
 	<footer>
 		<%@ include file="/decorators/footer.jsp" %>
 	</footer>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
 </body>

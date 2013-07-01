@@ -10,7 +10,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="${pageContext.request.contextPath}">Webtrack</a>
+			<a class="brand" href="/tetrawebtrack"><i class="icon-tasks icon-large"></i> Webtrack</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
 					<li>
@@ -29,39 +29,39 @@
 						</a>
 					</li>
 					<c:if test="${(userSession.user.perfil != 'CLIENTE' && userSession.user.perfil != 'TECNICO')}">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<i class="icon-folder-open"></i> <span>Cadastros</span>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="<c:url value="/cliente/listacliente"/>"><i class="icon-plus"></i> Cliente</a>
-								</li>
-								<li>
-									<a href="<c:url value="/grupo/listagrupo"/>"><i class="icon-adjust"></i> Grupo</a>
-								</li>
-							</ul>
-						</li>
-					</c:if>
-				</ul>
-				<ul class="nav pull-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> ${userSession.user.nome} <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-folder-open"></i> <span>Cadastros</span>
+						</a>
 						<ul class="dropdown-menu">
-							<c:if test="${userSession.user.perfil == 'ADMIN'}">
-							<li><a href="${pageContext.request.contextPath}/homeadmin"><i class="icon-gear"></i> Configurações</a></li>
-						</c:if>
-						<li><a href="#myModal"  role="button" data-toggle="modal"><i class="icon-lock"></i> Alterar senha</a></li>
-						<li class="divider"></li>
-						<li><a href="${pageContext.request.contextPath}/logout"><i class="icon-off"></i> Sair</a></li>
-					</ul>
-				</li>
+							<li>
+								<a href="<c:url value="/cliente/listacliente"/>"><i class="icon-male"></i> Cliente</a>
+							</li>
+							<li>
+								<a href="<c:url value="/grupo/listagrupo"/>"><i class="icon-group"></i> Grupo</a>
+							</li>
+						</ul>
+					</li>
+				</c:if>
 			</ul>
-			<form class="navbar-search pull-right">
-				<input type="text" class="search-query" placeholder="">
-			</form>
-		</div>
+			<ul class="nav pull-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> ${userSession.user.nome} <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<c:if test="${userSession.user.perfil == 'ADMIN'}">
+						<li><a href="${pageContext.request.contextPath}/homeadmin"><i class="icon-gear"></i> Configurações</a></li>
+					</c:if>
+					<li><a href="#myModal"  role="button" data-toggle="modal"><i class="icon-lock"></i> Alterar senha</a></li>
+					<li class="divider"></li>
+					<li><a href="${pageContext.request.contextPath}/logout"><i class="icon-off"></i> Sair</a></li>
+				</ul>
+			</li>
+		</ul>
+		<form class="navbar-search pull-right">
+			<input type="text" class="search-query" placeholder="">
+		</form>
 	</div>
+</div>
 </div>
 </div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -73,17 +73,17 @@
 		<form class="form-inline" action="${pageContext.request.contextPath}/alterarsenha" method="get">
 			<div class="input-prepend">
 				<div class="control-group">
-				<input class="span4" id="prependedInput" type="password" placeholder="Senha atual" name="senhaatual">
+					<input class="span4" id="prependedInput" type="password" placeholder="Senha atual" name="senhaatual">
 				</div>
 				<div class="control-group">
-				<input class="span4" id="prependedInput" type="password" placeholder="Nova senha" name="senhanova">
+					<input class="span4" id="prependedInput" type="password" placeholder="Nova senha" name="senhanova">
 				</div>
 				<div class="control-group">
-				<input class="span4" id="prependedInput" type="password" placeholder="Confirme nova senha" name="confirmasenha">
+					<input class="span4" id="prependedInput" type="password" placeholder="Confirme nova senha" name="confirmasenha">
 				</div>
 			</div>
 			<div class="control-group">
-			<button type="submit" class="btn btn-info">alterar</button>
+				<button type="submit" class="btn btn-info">alterar</button>
 			</div>
 		</form>
 	</div>

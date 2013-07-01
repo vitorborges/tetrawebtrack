@@ -52,6 +52,7 @@
 	<footer>
 		<%@ include file="/decorators/footer.jsp" %>
 	</footer>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="<c:url value="/js/bootstrap.js"/>"></script>
 </body>
