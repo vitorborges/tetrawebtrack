@@ -92,6 +92,10 @@ $.extend( $.fn.dataTableExt.oPagination, {
 } );
 
 $(document).ready(function() {
+
+
+	$('#myTab a:last').tab('show');
+
 	$('#tabela').dataTable({
 		"sDom": '<ft><iplr>',
 		"aLengthMenu": [[5, 10, 15, -1], [5, 10, 15, "Todos"]],

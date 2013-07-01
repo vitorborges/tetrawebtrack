@@ -57,12 +57,7 @@
 		<%@ include file="/decorators/footer.jsp" %>
 	</footer>	
 	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="<c:url value="js/bootstrap.js"/>"></script>
-	<script src="<c:url value="js/bootstrap-tabs.js"/>"></script>
-<script>
-  $(function () {
-    $('#myTab a:last').tab('show');
-  })
-</script>
-
+	<script src="<c:url value="/js/bootstrap.js"/>"/></script>
+	<script src="<c:url value="/js/application.js"/>"/></script>
+	
 </body>
