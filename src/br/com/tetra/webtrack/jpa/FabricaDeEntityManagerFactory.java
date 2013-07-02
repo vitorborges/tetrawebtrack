@@ -3,12 +3,8 @@ package br.com.tetra.webtrack.jpa;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import org.hibernate.HibernateException;
-import org.springframework.context.annotation.Bean;
-
 import br.com.caelum.vraptor.ioc.ApplicationScoped;
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.caelum.vraptor.ioc.ComponentFactory;
 
 @ApplicationScoped
 @Component

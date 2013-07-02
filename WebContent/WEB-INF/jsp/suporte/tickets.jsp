@@ -30,7 +30,6 @@
 								<th>#</th>
 								<th>Cliente</th>
 								<th>Descrição</th>
-								<th>Solução</th>
 								<th>Abertura</th>
 								<th>Término</th>
 								<th>Estado</th>
@@ -43,7 +42,6 @@
 								<td>1</td>
 								<td>Ipiranga HC</td>
 								<td>Balcão não funciona</td>
-								<td>Servidor reiniciado</td>
 								<td>25/06/2013 13:20</td>
 								<td>25/06/2013 13:40</td>
 								<td>Resolvido</td>
@@ -53,8 +51,7 @@
 								<td><input type="checkbox" /></td>
 								<td>2</td>
 								<td>Emprecom Guarus</td>
-								<td>Sistema desatualizado</td>
-								<td></td>
+								<td>Iraí não consegue acessar Banco do Brasil</td>
 								<td>25/06/2013 14:00</td>
 								<td></td>
 								<td>Pendente</td>
@@ -65,7 +62,6 @@
 								<td>3</td>
 								<td>Depósito do Kleber</td>
 								<td>Caixa 1 não exportou</td>
-								<td>Caixa exportado</td>
 								<td>25/06/2013 13:43</td>
 								<td>25/06/2013 13:47</td>
 								<td>Resolvido</td>
@@ -76,7 +72,6 @@
 								<td>4</td>
 								<td>Casa das Tintas</td>
 								<td>Não consegue reemitir nota fiscal</td>
-								<td>Download de xml e reimpressão pelo UNIDANFE</td>
 								<td>25/06/2013 15:10</td>
 								<td>25/06/2013 15:25</td>
 								<td>Resolvido</td>
@@ -86,7 +81,6 @@
 								<td><input type="checkbox" /></td>
 								<td>5</td>
 								<td>Supermercado Econômico</td>
-								<td>Busca preço não funciona</td>
 								<td>Sistema reiniciado</td>
 								<td>25/06/2013 15:28</td>
 								<td>25/06/2013 15:34</td>
@@ -98,7 +92,6 @@
 								<td>6</td>
 								<td>Irmãos Pessanha</td>
 								<td>Cancelamento de nota fiscal</td>
-								<td></td>
 								<td>25/06/2013 16:00</td>
 								<td></td>
 								<td>Pendente</td>
@@ -109,7 +102,6 @@
 								<td>7</td>
 								<td>Meca</td>
 								<td>Nota sendo emitida pela filial errada</td>
-								<td>Sistema configurado corretamente</td>
 								<td>25/06/2013 16:15</td>
 								<td>25/06/2013 17:00</td>
 								<td>Resolvido</td>
@@ -120,7 +112,6 @@
 								<td>8</td>
 								<td>Demaco</td>
 								<td>DAV saindo cortado</td>
-								<td>Configurada impressora no padrão A5</td>
 								<td>25/06/2013 17:03</td>
 								<td>25/06/2013 17:10</td>
 								<td>Resolvido</td>
@@ -131,7 +122,6 @@
 								<td>9</td>
 								<td>Rei do Queijo</td>
 								<td>Erro no balanço</td>
-								<td></td>
 								<td>25/06/2013 17:03</td>
 								<td></td>
 								<td>Pendente</td>

@@ -20,8 +20,8 @@ public class SuporteController {
 		
 	}
     
-    @Get("/suporte/tickets/presencial")
-    public void presencial() {
+    @Get("/suporte/tickets/novo")
+    public void novochamado() {
     	
     }
 }

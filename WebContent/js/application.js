@@ -12,7 +12,7 @@ $.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
         "iTotalPages":    oSettings._iDisplayLength === -1 ?
             0 : Math.ceil( oSettings.fnRecordsDisplay() / oSettings._iDisplayLength )
     };
-}
+};
  
 /* Bootstrap style pagination control */
 $.extend( $.fn.dataTableExt.oPagination, {
@@ -117,5 +117,5 @@ $(document).ready(function() {
 				"sLast":     "Último"
 			}
 		}
-	})
+	});
 });

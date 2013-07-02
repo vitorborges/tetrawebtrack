@@ -16,41 +16,39 @@ import br.com.tetra.webtrack.util.Utils;
 public class UsuarioController {
 
 	private Result result;
-    private UsuarioDAO dao;
+	private UsuarioDAO dao;
 
-	 public UsuarioController(Result result, UsuarioDAO dao) {
-		 this.result = result;
-		 this.dao = dao;
+	public UsuarioController(Result result, UsuarioDAO dao) {
+		this.result = result;
+		this.dao = dao;
 	}
-	
+
 	@Post("/usuario")
-	public void novo(Usuario usuario) throws UnsupportedEncodingException{
-	 	usuario.setSenha(Utils.md5(usuario.getSenha()));
+	public void novo(Usuario usuario) throws UnsupportedEncodingException {
+		usuario.setSenha(Utils.md5(usuario.getSenha()));
 		dao.gravar(usuario);
 		result.redirectTo(this).listausuario();
 	}
-	 
+
 	@Path("/listausuario")
 	public void listausuario() {
-		 result.include("usuarioList", dao.listar());
+		result.include("usuarioList", dao.listar());
 	}
-	 
+
 	@Path("/usuario/form")
 	public void form(){
 		result.include("perfilList",PerfilUsuario.values());
 	}
-	 
+
 	@Get("/usuario/editar/{usuario.id}")
 	public void editar(Usuario usuario){
-		 result.include("perfilList", PerfilUsuario.values());
-		 result.include("usuario", dao.buscar(usuario.getId()));
+		result.include("perfilList", PerfilUsuario.values());
+		result.include("usuario", dao.buscar(usuario.getId()));
 	}
-	 
+
 	@Put("/usuario/edita/{usuario.id}")
 	public void edita(Usuario usuario){
-			dao.gravar(usuario);
-			result.redirectTo(this).listausuario();
-		}
-	 
-	 
+		dao.gravar(usuario);
+		result.redirectTo(this).listausuario();
+	}
 }
