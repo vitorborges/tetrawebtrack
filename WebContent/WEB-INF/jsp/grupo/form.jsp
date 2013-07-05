@@ -61,7 +61,7 @@
               <label class="control-label"></label>
               <div class="controls">
                 <button id="button1id" name="button1id" class="btn btn-success">Gravar</button>
-                <button id="button2id" name="button2id" class="btn btn-danger">Cancelar</button>
+                <a href="${pageContext.request.contextPath}"> <button  type="button" id="button2id" name="button2id" class="btn btn-danger">Cancelar</button></a>
               </div>
             </div>
 
