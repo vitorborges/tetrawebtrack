@@ -46,7 +46,7 @@ public class WebtrackController {
 			result.redirectTo(this).sistema();
 			System.out.println("senha alterada!");
 		} else {
-			System.out.println("senha atual não confere!");
+			System.out.println("senha atual nï¿½o confere!");
 			result.redirectTo(LoginController.class).logout();
 		}
 	}
