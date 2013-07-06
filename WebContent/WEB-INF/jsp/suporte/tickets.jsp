@@ -41,12 +41,12 @@
 							<tr>
 								<td><input type="checkbox"></td>
 								<td>${chamado.id}</td>
-								<td></td>
+								<td>${chamado.cliente.fantasia}</td>
 								<td>${chamado.problema}</td>
 								<td>${chamado.dtabertura}</td>
 								<td>${chamado.dtfechamento}</td>
 								<td>${chamado.status}</td>
-								<td>${chamado.id_cliente}</td>
+								<td>${chamado.usuario}</td>
 							</tr>
 							</c:forEach>
 						</tbody>

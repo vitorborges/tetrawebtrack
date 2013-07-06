@@ -10,7 +10,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="/tetrawebtrack"><i class="icon-th icon-large"></i> Webtrack</a>
+			<a class="brand" href="/tetrawebtrack"><i class="icon-bookmark icon-large"></i> Webtrack</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
 					<li>
@@ -42,11 +42,10 @@
 							</li>
 							</c:if>
 							<li>
-								<a href="<c:url value="/grupo/listaequipamento"/>"><i class="icon-group"></i> Equipamento</a>
+								<a href="<c:url value="/grupo/listaequipamento"/>"><i class="icon-archive"></i> Equipamento</a>
 							</li>
 						</ul>
 					</li>
-				
 			</ul>
 			<ul class="nav pull-right">
 				<li class="dropdown">

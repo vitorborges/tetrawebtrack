@@ -46,15 +46,15 @@
 						</div>
 					</c:if>
 					<c:if test="${not empty success}">
-						<div class="alert alert-success">
-							<button class="close" data-dismiss="alert">&times;</button>
-							${success}
-						</div>
-					</c:if>
-				</form>
-			</div>
+					<div class="alert alert-success">
+						<button class="close" data-dismiss="alert">&times;</button>
+						${success}
+					</div>
+				</c:if>
+			</form>
 		</div>
 	</div>
+</div>
 </div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-header">
@@ -72,9 +72,10 @@
 	</div>
 	<div class="modal-footer"></div>
 </div>
-<div class="navbar navbar-fixed-bottom">
-	<div class="navbar-inner"></div>
-</div>
+<footer>
+	<%@ include file="/decorators/footer.jsp" %>
+</footer>
+
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
