@@ -5,6 +5,7 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.annotation.Public;
+import br.com.tetra.webtrack.dao.ConfigDAO;
 import br.com.tetra.webtrack.dao.UsuarioDAO;
 import br.com.tetra.webtrack.entity.Usuario;
 import br.com.tetra.webtrack.model.LoginBusiness;
@@ -19,12 +20,14 @@ public class LoginController {
 	    private UserSession userSession;
 	    private LoginBusiness business;
 	    private UsuarioDAO usuariodao;
+	    private ConfigDAO configdao;
 
-	    public LoginController(Result result, UserSession userSession, LoginBusiness business, UsuarioDAO usuariodao) {
+	    public LoginController(Result result, UserSession userSession, LoginBusiness business, UsuarioDAO usuariodao, ConfigDAO configDAO) {
 	        this.result = result;
 	        this.userSession = userSession;
 	        this.business = business;
 	        this.usuariodao = usuariodao;
+	        this.configdao = configDAO;
 	    }
 
 	    @Public
@@ -72,7 +75,7 @@ public class LoginController {
 	    	
 	    	user.setSenha(Utils.md5(senhaaux));
 	    	
-	    	Email e = new Email();
+	    	Email e = new Email(configdao);
 	    	senhaaux = e.enviar(email,"Recuperação de senha.","Uma nova senha foi gerada. A nova senha é: "+senhaaux);
   	
 	    		if (senhaaux != null) {

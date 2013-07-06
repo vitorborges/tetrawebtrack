@@ -13,9 +13,10 @@ import br.com.tetra.webtrack.entity.Config;
 public class Email {
 	
 	private ConfigDAO dao;
+
 	
-	public Email() {
-		this.dao = new ConfigDAO();
+	public Email(ConfigDAO dao) {
+		this.dao = dao;
 	}
 
 	public String enviar(String email, String subject, String mensagem) throws EmailException, UnsupportedEncodingException {
