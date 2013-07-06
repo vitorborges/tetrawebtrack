@@ -18,14 +18,14 @@
 		<%@ include file="/decorators/header.jsp" %>
 	</header>
 	<div class="wrapper">
-		<div class="row">	
+		<div class="row">
 			<div class="span1 offset2">
 				<p><a href="${pageContext.request.contextPath}/usuario/form"><button class="btn btn-small btn-primary" type="button">Cadastrar</button></a></p>
 			</div>
 			<div class="span1 offset5">
 				<a href="${pageContext.request.contextPath}/homeadmin"><button class="btn btn-small btn-link" type="button">voltar</button></a>
 			</div>
-		</div>	
+		</div>
 		<div class="row">
 			<div class="span7 offset2">
 				<table class="table table-condensed">

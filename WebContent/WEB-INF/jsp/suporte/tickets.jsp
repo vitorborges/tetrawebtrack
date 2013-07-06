@@ -37,96 +37,18 @@
 							</tr>
 						</thead>
 						<tbody>
+							<c:forEach var="chamado" items="${chamadoList}">
 							<tr>
 								<td><input type="checkbox"></td>
-								<td>1</td>
-								<td>Ipiranga HC</td>
-								<td>Balcão não funciona</td>
-								<td>25/06/2013 13:20</td>
-								<td>25/06/2013 13:40</td>
-								<td>Resolvido</td>
-								<th>Matheus</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>2</td>
-								<td>Emprecom Guarus</td>
-								<td>Iraí não consegue acessar Banco do Brasil</td>
-								<td>25/06/2013 14:00</td>
+								<td>${chamado.id}</td>
 								<td></td>
-								<td>Pendente</td>
-								<th>Jocinardo</th>
+								<td>${chamado.problema}</td>
+								<td>${chamado.dtabertura}</td>
+								<td>${chamado.dtfechamento}</td>
+								<td>${chamado.status}</td>
+								<td>${chamado.id_cliente}</td>
 							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>3</td>
-								<td>Depósito do Kleber</td>
-								<td>Caixa 1 não exportou</td>
-								<td>25/06/2013 13:43</td>
-								<td>25/06/2013 13:47</td>
-								<td>Resolvido</td>
-								<th>Robson</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>4</td>
-								<td>Casa das Tintas</td>
-								<td>Não consegue reemitir nota fiscal</td>
-								<td>25/06/2013 15:10</td>
-								<td>25/06/2013 15:25</td>
-								<td>Resolvido</td>
-								<th>Matheus</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>5</td>
-								<td>Supermercado Econômico</td>
-								<td>Sistema reiniciado</td>
-								<td>25/06/2013 15:28</td>
-								<td>25/06/2013 15:34</td>
-								<td>Resolvido</td>
-								<th>Lucas</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>6</td>
-								<td>Irmãos Pessanha</td>
-								<td>Cancelamento de nota fiscal</td>
-								<td>25/06/2013 16:00</td>
-								<td></td>
-								<td>Pendente</td>
-								<th>Matheus</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>7</td>
-								<td>Meca</td>
-								<td>Nota sendo emitida pela filial errada</td>
-								<td>25/06/2013 16:15</td>
-								<td>25/06/2013 17:00</td>
-								<td>Resolvido</td>
-								<th>Vitor</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>8</td>
-								<td>Demaco</td>
-								<td>DAV saindo cortado</td>
-								<td>25/06/2013 17:03</td>
-								<td>25/06/2013 17:10</td>
-								<td>Resolvido</td>
-								<th>Carlos</th>
-							</tr>
-							<tr>
-								<td><input type="checkbox" /></td>
-								<td>9</td>
-								<td>Rei do Queijo</td>
-								<td>Erro no balanço</td>
-								<td>25/06/2013 17:03</td>
-								<td></td>
-								<td>Pendente</td>
-								<th>Marcus</th>
-							</tr>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>
