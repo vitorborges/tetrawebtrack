@@ -6,15 +6,14 @@ import javax.persistence.Query;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.tetra.webtrack.entity.Config;
-import br.com.tetra.webtrack.jpa.JPAFactory;
 
 @Component
 public class ConfigDAO {
 
-	private EntityManager manager;
+	protected EntityManager manager;
 	
-	public ConfigDAO() {
-        this.manager = JPAFactory.getEntityManager();
+	public ConfigDAO(EntityManager manager) {
+		this.manager = manager;
 	}
 	
 	public Config buscaConfig(int id) {
@@ -26,6 +25,18 @@ public class ConfigDAO {
             return null;
         }
 		
+	}
+	
+	
+	public void gravarConfig(Config config){
+		try{
+			this.manager.getTransaction().begin();
+			this.manager.merge(config);
+			this.manager.getTransaction().commit();
+			System.out.println("Sucesso na Gravação");
+		} catch (Exception ex){
+			System.out.println("Erro de SQL " + ex);
+		}
 	}
 }
 
