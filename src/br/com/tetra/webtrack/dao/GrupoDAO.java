@@ -7,7 +7,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.tetra.webtrack.model.Grupo;
+import br.com.tetra.webtrack.entity.Grupo;
 
 @Component
 public class GrupoDAO {

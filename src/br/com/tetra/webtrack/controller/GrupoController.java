@@ -7,7 +7,7 @@ import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.dao.GrupoDAO;
-import br.com.tetra.webtrack.model.Grupo;
+import br.com.tetra.webtrack.entity.Grupo;
 
 @Resource
 public class GrupoController {

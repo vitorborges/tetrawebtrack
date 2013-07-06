@@ -7,7 +7,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.tetra.webtrack.model.Usuario;
+import br.com.tetra.webtrack.entity.Usuario;
 
 @Component
 public class UsuarioDAO {

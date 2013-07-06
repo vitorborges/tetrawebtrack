@@ -1,4 +1,4 @@
-package br.com.tetra.webtrack.model;
+package br.com.tetra.webtrack.entity;
 
 import java.util.Calendar;
 import java.util.Collection;

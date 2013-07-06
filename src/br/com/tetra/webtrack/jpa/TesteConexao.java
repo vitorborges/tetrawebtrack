@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-import br.com.tetra.webtrack.model.Ticket;
+import br.com.tetra.webtrack.entity.Ticket;
 
 public class TesteConexao {
 

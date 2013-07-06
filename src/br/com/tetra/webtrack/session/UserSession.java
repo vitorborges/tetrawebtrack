@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
-import br.com.tetra.webtrack.model.Usuario;
+import br.com.tetra.webtrack.entity.Usuario;
 
 @Component
 @SessionScoped

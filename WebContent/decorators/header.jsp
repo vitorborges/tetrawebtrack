@@ -28,21 +28,25 @@
 							<i class="icon-check"></i> <span>Implantações</span>
 						</a>
 					</li>
-					<c:if test="${(userSession.user.perfil != 'CLIENTE' && userSession.user.perfil != 'TECNICO')}">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-folder-open"></i> <span>Cadastros</span>
 						</a>
 						<ul class="dropdown-menu">
+							<c:if test="${(userSession.user.perfil != 'CLIENTE' && userSession.user.perfil != 'TECNICO')}">
 							<li>
 								<a href="<c:url value="/cliente/listacliente"/>"><i class="icon-male"></i> Cliente</a>
 							</li>
 							<li>
 								<a href="<c:url value="/grupo/listagrupo"/>"><i class="icon-group"></i> Grupo</a>
 							</li>
+							</c:if>
+							<li>
+								<a href="<c:url value="/grupo/listaequipamento"/>"><i class="icon-group"></i> Equipamento</a>
+							</li>
 						</ul>
 					</li>
-				</c:if>
+				
 			</ul>
 			<ul class="nav pull-right">
 				<li class="dropdown">

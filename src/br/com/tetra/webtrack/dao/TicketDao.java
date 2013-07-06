@@ -7,10 +7,10 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.tetra.webtrack.model.Grupo;
-import br.com.tetra.webtrack.model.Status;
-import br.com.tetra.webtrack.model.Ticket;
-import br.com.tetra.webtrack.model.Usuario;
+import br.com.tetra.webtrack.entity.Grupo;
+import br.com.tetra.webtrack.entity.Status;
+import br.com.tetra.webtrack.entity.Ticket;
+import br.com.tetra.webtrack.entity.Usuario;
 
 @Component
 public class TicketDao {

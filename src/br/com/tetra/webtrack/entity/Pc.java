@@ -1,4 +1,4 @@
-package br.com.tetra.webtrack.model;
+package br.com.tetra.webtrack.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

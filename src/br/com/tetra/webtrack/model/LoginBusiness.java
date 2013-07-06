@@ -1,11 +1,11 @@
-package br.com.tetra.webtrack.business;
+package br.com.tetra.webtrack.model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.tetra.webtrack.model.Usuario;
+import br.com.tetra.webtrack.entity.Usuario;
 
 @Component
 public class LoginBusiness {

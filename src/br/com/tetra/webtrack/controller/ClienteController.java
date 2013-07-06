@@ -7,7 +7,7 @@ import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.dao.ClienteDAO;
-import br.com.tetra.webtrack.model.Cliente;
+import br.com.tetra.webtrack.entity.Cliente;
 
 @Resource
 public class ClienteController {

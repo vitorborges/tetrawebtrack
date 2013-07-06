@@ -6,13 +6,13 @@
 
 <persistence-unit name="default">
 	<provider>org.hibernate.ejb.HibernatePersistence</provider>
-	<class>br.com.tetra.webtrack.model.Usuario</class>
-	<class>br.com.tetra.webtrack.model.Atendimento</class>
-	<class>br.com.tetra.webtrack.model.Config</class>
-	<class>br.com.tetra.webtrack.model.Cliente</class>
-	<class>br.com.tetra.webtrack.model.Grupo</class>
-	<class>br.com.tetra.webtrack.model.Ticket</class>
-	<class>br.com.tetra.webtrack.model.Equipamento</class>
+	<class>br.com.tetra.webtrack.entity.Usuario</class>
+	<class>br.com.tetra.webtrack.entity.Atendimento</class>
+	<class>br.com.tetra.webtrack.entity.Config</class>
+	<class>br.com.tetra.webtrack.entity.Cliente</class>
+	<class>br.com.tetra.webtrack.entity.Grupo</class>
+	<class>br.com.tetra.webtrack.entity.Ticket</class>
+	<class>br.com.tetra.webtrack.entity.Equipamento</class>
 	<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>

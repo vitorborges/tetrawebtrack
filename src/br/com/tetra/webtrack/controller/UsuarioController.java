@@ -9,8 +9,8 @@ import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.dao.UsuarioDAO;
-import br.com.tetra.webtrack.model.PerfilUsuario;
-import br.com.tetra.webtrack.model.Usuario;
+import br.com.tetra.webtrack.entity.PerfilUsuario;
+import br.com.tetra.webtrack.entity.Usuario;
 import br.com.tetra.webtrack.util.Utils;
 @Resource
 public class UsuarioController {

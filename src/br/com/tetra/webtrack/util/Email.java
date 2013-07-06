@@ -7,7 +7,7 @@ import org.apache.commons.mail.SimpleEmail;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.tetra.webtrack.dao.ConfigDAO;
-import br.com.tetra.webtrack.model.Config;
+import br.com.tetra.webtrack.entity.Config;
 
 @Component
 public class Email {
