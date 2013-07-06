@@ -2,20 +2,22 @@ package br.com.tetra.webtrack.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Config {
 
-	@Id
+	@Id @GeneratedValue
 	@Column(name="id_config")
 	private Long id;
-	@Column(length=35)
+	@Column(length=100)
 	private String emailsmtp;
-	@Column(length=30)
+	@Column(length=100)
 	private String emaillogin;
 	private Integer emailporta;
-	@Column(length = 32)
+	@Column(length = 50)
 	private String emailsenha;
 	
 	// getters and setters
