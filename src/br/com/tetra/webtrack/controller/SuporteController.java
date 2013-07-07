@@ -5,6 +5,7 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.tetra.webtrack.session.UserSession;
 import br.com.tetra.webtrack.dao.TicketDAO;
+import br.com.tetra.webtrack.entity.Ticket;
 
 @Resource
 public class SuporteController {
