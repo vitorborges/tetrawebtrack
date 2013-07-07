@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,12 +42,12 @@
 							<tr>
 								<td><input type="checkbox"></td>
 								<td>${chamado.id}</td>
-								<td></td>
+								<td>${chamado.cliente.fantasia}</td>
 								<td>${chamado.problema}</td>
-								<td>${chamado.dtabertura}</td>
-								<td>${chamado.dtfechamento}</td>
+								<td><joda:format value="${chamado.dtabertura}" pattern="dd-MM-yyyy HH:mm"/></td>
+								<td><joda:format value="${chamado.dtfechamento}" pattern="dd-MM-yyyy HH:mm"/></td>								
 								<td>${chamado.status}</td>
-								<td>${chamado.id_cliente}</td>
+								<td>${chamado.usuario.nome}</td>
 							</tr>
 							</c:forEach>
 						</tbody>

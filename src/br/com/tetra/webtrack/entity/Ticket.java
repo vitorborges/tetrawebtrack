@@ -1,6 +1,5 @@
 package br.com.tetra.webtrack.entity;
 
-import java.util.Calendar;
 import java.util.Collection;
 
 import javax.persistence.Column;
@@ -13,12 +12,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Type;
+import org.joda.time.LocalDateTime;
 
 @Entity
 public class Ticket {
@@ -27,11 +25,11 @@ public class Ticket {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_ticket")
 	private long id;
-	@Temporal(TemporalType.TIMESTAMP)
+	@Type(type = "org.joda.time.contrib.hibernate.PersistentLocalDateTime")
 	@Column(nullable=false)
-	private Calendar dtabertura;
-	@Temporal(TemporalType.TIMESTAMP)
-	private Calendar dtfechamento;
+	private LocalDateTime dtabertura;
+	@Type(type = "org.joda.time.contrib.hibernate.PersistentLocalDateTime")
+	private LocalDateTime dtfechamento;
 	private String status;
 	private String tipo;
 	private String prioridade;
@@ -118,17 +116,17 @@ public class Ticket {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Calendar getDtabertura() {
+	public LocalDateTime getDtabertura() {
 		return dtabertura;
 	}
-	public void setDtabertura(Calendar dtabertura) {
+	public void setDtabertura(LocalDateTime dtabertura) {
 		this.dtabertura = dtabertura;
 	}
 	
-	public Calendar getDtfechamento() {
+	public LocalDateTime getDtfechamento() {
 		return dtfechamento;
 	}
-	public void setDtfechamento(Calendar dtfechamento) {
+	public void setDtfechamento(LocalDateTime dtfechamento) {
 		this.dtfechamento = dtfechamento;
 	}
 	public String getContato() {
